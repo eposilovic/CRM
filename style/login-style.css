@@ -1,0 +1,284 @@
+.login-left, .login-right{
+    width: 50%;
+    display: block;
+    height: 100vh;
+}
+
+.login-left{
+    float: left;
+}
+
+.login-right{
+    float: right;
+    background:url("../img/login-img.jpg") no-repeat center center /contain;
+    background-color: #e5f8fe;
+}
+
+.login-logo{
+    width: 150px;
+    max-width: 100%;
+}
+
+.left-box{
+    text-align: center;
+    top: 25%;
+    position: relative;
+}
+
+.left-box h1{   
+    font-size: 45px;
+    color: #44484d;
+}
+
+.left-box p{
+    font-size: 15px;
+    margin-top: -20px;
+}
+
+#login-email, #login-pass, #login-name{
+    border: 2px solid #e2eafd;
+    padding: 20px 20px 20px 55px;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    box-shadow: var(--shadow);
+}
+
+#login-email{
+    background: url("../img/mail-outline.svg") no-repeat left center /35px;
+    background-position: 10px;
+}
+
+#login-pass{
+    background: url("../img/padlock.png") no-repeat left center /35px;
+    background-position: 10px;
+}
+
+#login-name{
+    background: url("../img/user-name.svg") no-repeat left center /35px;
+    background-position: 10px;
+}
+
+::placeholder{
+    font-size: 20px;
+    font-family: var(--font_roboto);
+    color: #e2eafd;
+    /*padding-left: 40px;*/
+}
+
+#remember-pass{
+    text-align: left;
+    cursor: pointer;
+    float: left;
+}
+
+label[for="remember-pass"]{
+    float: left;
+    cursor: pointer;
+}
+
+#login-submit{
+    display: block;
+    margin: 50px auto 30px;
+    background-color: #08b2fb;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    font-family: var(--font_roboto);
+    font-size: 25px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    cursor: pointer;
+    transition: var(--transition_time);
+}
+
+#login-submit:hover{
+    background-color: #4ac6f7;
+    box-shadow: var(--shadow);
+}
+
+#login-email:focus-visible, #login-pass:focus-visible, #login-name:focus-visible{
+    outline: 2px solid #4ac6f7;
+}
+
+.login-left form{
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.pass-reset{
+    text-decoration: none;
+    float: right;
+    color: var(--hover_color);
+    transition: var(--transition_time);
+}
+
+.pass-reset:hover{
+    color: #08b2fb;
+}
+
+/*---RESPONSIVE---*/
+
+@media(max-width:768px){
+    .login-left, .login-right{
+        width: 100%;
+    }
+    
+    .login-left{
+        background-color: #fffffff2;
+    }
+
+    .login-right{
+        position: absolute;
+        z-index: -1;
+        background-size: cover;
+    }
+
+    .login-logo{
+        width: 200px;
+    }
+    #login-email, #login-pass, #login-name{
+        width: 100%;
+    }
+
+    #login-submit{
+        width: 100%;
+    }
+    .left-box{
+        top: 10%;
+    }
+    .left-box p{
+        width: 100%;
+        max-width: 250px;
+        margin-left:auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+    }
+    #login-email, #login-pass, #login-name{
+        background-color: #fff;
+    }
+    .login-left form{
+        padding: 0 15px;
+    }
+}
+
+/*---RESPONSIVE---*/
+
+
+/*DEPARTMENT SELECTOR*/
+
+.dept-slct-wrap label{
+    font-size: 30px;
+    color: #44484d;
+    text-align: center;
+    display: block;
+    margin: 20px 0;
+    font-weight: 500;
+}
+
+.dept-slct-wrap form select{
+    border: 2px solid #e2eafd;
+    padding: 20px 10px;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    box-shadow: var(--shadow);
+    font-size: 22px;
+    cursor: pointer;
+    color: #44484d;
+}
+
+.dept-slct-wrap form input[type="submit"]{
+    display: block;
+    margin: 30px auto 30px;
+    background-color: #08b2fb;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    font-family: var(--font_roboto);
+    font-size: 25px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    cursor: pointer;
+    transition: var(--transition_time);
+}
+
+.dept-slct-wrap form input[type="submit"]:hover{
+    background-color: #4ac6f7;
+    box-shadow: var(--shadow);
+}
+
+.dept-slct-wrap form select:active, .dept-slct-wrap form select:focus-visible, .dept-slct-wrap form select:focus-within{
+    outline: 2px solid #4ac6f7;
+}
+
+/*DEPARTMENT SELECTOR*/
+
+
+
+/* NOVI CORRES STIL POPRAVCI */
+
+.timeline-box textarea::-webkit-scrollbar{
+    height: 12px;
+    width: 8px;
+ }
+ 
+ .timeline-box textarea::-webkit-scrollbar-track{
+     background-color: #ec59308e;
+     border-radius: 3px;
+ }
+ 
+ .timeline-box textarea::-webkit-scrollbar-thumb{
+     background-color: #fff;
+     border-radius: 13px;
+ }
+ 
+ .timeline-box textarea::-webkit-scrollbar-thumb:hover{
+     background-color: #d6f0f7;
+ }
+ 
+
+
+.timeline-box:nth-child(even) {
+    float: right;
+    padding-left: 0;
+}
+
+.timeline-box{
+    padding: 10px 0 10px 40px;
+}
+
+.timeline-box p:first-child{
+    margin-right: 0;
+    margin-left: auto;
+    padding: 10px 15px 10px 80px;
+}
+
+.timeline-box:nth-child(odd) ion-icon:nth-child(2){
+    margin-right: auto;
+    margin-left: 0;
+}
+
+.timeline-box:nth-child(odd) p:nth-child(4){
+    display: block;
+    text-align: right;
+}
+
+.timeline-box:nth-child(odd) .timeline-img-wrap{
+    text-align: right;
+    margin-right: 0;
+    margin-left: auto;
+}
+
+.timeline-box:nth-child(odd) ion-icon[name="create"]{
+    left:50px;
+    right: 0;
+    bottom: 65px;
+}
+

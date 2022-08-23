@@ -1,0 +1,440 @@
+/*---PANEL---*/
+.panel-container{
+    padding: 50px 25px 30px 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 100px 30px;
+}
+
+.panel-box-link{
+    text-decoration: none;
+    color: var(--hover_color);
+    display: block;
+    transition: var(--transition_time);
+    border-radius: 3px;
+}
+
+.panel-box-link:hover{
+    background-color: #fff;
+    box-shadow: var(--shadow);
+}
+
+.panel-box-link:hover .panel-box{
+    border-color: var(--hover_color);
+    border-radius: 3px;
+}
+
+.panel-box-link:hover .panel-box ion-icon{
+    transform: translate(0, 10px);
+    box-shadow: var(--shadow);
+}
+
+.panel-box{
+    display: block;
+    border: 1px solid;
+    border-radius: 3px;
+    width: 200px;
+    height: 100%;
+    max-height: 150px;
+    padding: 25px 50px;
+    text-align: center;
+    background-color: #fff;
+    border-color: #fff;
+    transition: var(--transition_time);
+    box-shadow: var(--shadow);
+}
+
+.panel-box h3{
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.panel-box ion-icon{
+    color: #fff;
+    font-size: 35px;
+    position: absolute;
+    margin: -50px -25px 0;
+    border: 5px solid var(--hover_color);
+    border-radius: 5px;
+    background-color: var(--hover_color);
+    transition: .5s;
+}
+
+.panel-box hr{
+    margin-top: -15px;
+    width: 50px;
+    border: 1px solid #30c4ec6b;
+}
+
+/*---TO TOP BUTTON---*/
+.to-top{
+    position: fixed;
+    z-index: 2;
+    right: 30px;
+    bottom: 80px;
+    font-size: 50px;
+    color: #fff;
+    background-color: var(--hover_color);
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    transition: var(--transition_time);
+    display: none;
+}
+
+.to-top ion-icon{
+    display: block;
+}
+
+.to-top:hover{
+    transform: scale(1.1);
+    box-shadow: 2px 2px 3px #00000083;;
+}
+
+/*---MY PROFILE---*/
+.profile-wrapper{
+    padding: 10px 25px 30px 25px;
+}
+
+.profile-wrapper h1{
+    padding: 0;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.profile-wrapper a{
+    text-decoration: none;
+    color: var(--hover_color);
+    transition: var(--transition_time);
+    font-size: 17px;
+}
+
+.profile-wrapper a ion-icon{
+    vertical-align: top;
+    font-size: 20px;
+}
+
+.profile-wrapper a:hover{
+    color: #08b2fb;
+}
+
+.profile-img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--hover_color);
+    display: block;
+    float: left;
+    margin: 0 50px 0 0;
+}
+
+.profile-wrapper p{
+    color: var(--text_color);
+}
+
+.profile-wrapper p ion-icon{
+    font-size: 20px;
+}
+
+.profile-countries{
+    margin: 50px 0 0;
+}
+
+.profile-countries h2{
+    color: var(--text_color);
+    font-weight: 400;
+    font-size: 28px;
+}
+
+.profile-countries-list ul li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0 10px;
+    margin: 10px 0;
+    background-color: #30c4ec0d;
+    border: 2px solid #ebebeb;
+    border-left: none;
+    border-right: none;
+    padding: 10px;
+}
+
+.profile-countries-list a{
+    color: var(--text_color);
+    width: 100%;
+    max-width: 250px;
+}
+
+.profile-countries-list ul :nth-child(odd){
+    background-color: #fff;
+}
+
+.profile-countries-list ul{
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.profile-countries-list ul li:first-child div{
+    font-weight: 500;
+    background-color: transparent;
+    color: var(--text_color);
+    font-size: 17px;
+}
+
+.profile-countries .profile-countries-list ul li div{
+    background-color: transparent;
+    width: 100%;
+    max-width: 250px;
+    color: var(--text_color);
+}
+
+.profile-countries-list ul li:first-child{
+    background-color: transparent;
+    border: none;
+}
+
+.profile-countries .profile-countries-list ul li div b{
+    background-color: transparent;
+}
+
+@media(max-width: 500px){
+    .profile-img{
+        float: none;
+        margin: 0 auto;
+    }
+
+    .profile-wrapper h1,  .profile-wrapper p, .profile-countries h2{
+        text-align: center;
+        width: 100%;
+    }
+
+    .profile-wrapper a{
+        text-align: center;
+        display: block;
+    }
+
+    .profile-countries a{
+        text-align: left;
+    }
+}
+
+/*---MARKETS---*/
+
+.markets-wrapper{
+    padding: 10px 25px 30px 25px;
+}
+
+.flag-img-big{
+    width: 50px;
+    height: auto;
+    box-shadow: var(--shadow);
+}
+
+.market-block{
+    background-color: #fff;
+    box-shadow: var(--shadow);
+    border-radius: 3px;
+    padding: 10px 20px;
+    color: var(--text_color);
+    margin: 15px 0;
+    border: 1px solid #6b6f761a;
+    border-right: none;
+    border-left: none;
+}
+
+.market-block a{
+    color: var(--hover_color);
+    text-decoration: none;
+}
+
+.market-block a:hover{
+    color: #08b2fb;
+}
+
+.market-details{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.market-details div{
+    display: none;
+}
+
+.market-details  div ul{
+    list-style: none;
+    padding-left: 0;
+}
+
+.market-heading{
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    gap: 2%;
+}
+
+.market-heading h2{
+    width: 150px;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.expand-market{
+    font-size: 35px;
+    color: #fff;
+    background-color: var(--hover_color);
+    cursor: pointer;
+    transition: .5s;
+    margin-left: auto;
+    border-radius: 3px;
+    box-shadow: var(--shadow);
+}
+
+.expand-market:hover{
+    background-color: #08b2fb;
+}
+
+.expand-market:active{
+    transform: scale(1);
+}
+
+.icon-rotate{
+    transform: rotate(180deg);
+    transition: .5s;
+}
+
+.active{
+    color: var(--hover_color);
+    transition: .5s;
+}
+
+.market-details div ul li{
+    margin: 5px 0;
+}
+
+.market-details h3{
+    color: var(--hover_color);
+    font-weight: 500;
+}
+
+.market-details div ul li a ion-icon{
+    vertical-align: middle;
+}
+
+.continent-filter{
+    margin: 0 25px;
+}
+
+#filter-by-continent{
+    color: var(--text_color);
+    padding: 10px 15px;
+    font-size: 16px;
+    box-shadow: 2px 2px 3px #00000021;
+    cursor: pointer;
+    border: 1px solid rgb(229 229 229);
+    transition: var(--transition_time);
+    border-radius: 3px;
+    background-color: #fff;
+}
+
+#filter-by-continent:hover{
+    color: var(--hover_color);
+}
+
+#filter-by-continent:focus-visible{
+    outline: none;
+}
+
+#filter-by-continent option{
+    font-size: 17px;
+}
+
+
+#filter-by-continent option::after{
+    content: "";
+}
+
+/* ----------NEW MARKETS STYLE 28.6.---------- */
+
+.market-details hr{
+    width: 100%;
+    border: transparent;
+    margin: 0;
+}
+
+.market-details p{
+    margin: 5px 0;
+}
+
+.payout-btn{
+    border-radius: 3px 3px 0 0;
+    border-color: transparent;
+    cursor: pointer;
+    padding: 2px 5px;
+    font-size: 15px;
+    background-color: var(--hover_color);
+    color: var(--bg_white);
+    transition: var(--transition_time);
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.payout-btn:hover{
+    background-color: #08b2fb;
+}
+
+.payout-list{
+    display: none;
+    position: absolute;
+    background: #f6f7fb;
+    border-radius: 0 0 5px 5px;
+    margin: 0;
+    line-height: 1.8;
+    padding: 5px;
+    font-size: 16px;
+    box-shadow: var(--shadow);
+    margin-left: 62px;
+    max-height: 150px;
+    overflow-y: scroll;
+}
+
+.payout-list::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .payout-list::-webkit-scrollbar-track {
+    background: var(--bg_white);
+    box-shadow: inset 0 0 5px rgb(179, 179, 179);
+  }
+  
+  .payout-list::-webkit-scrollbar-thumb {
+    background:  var(--hover_color);
+    border-radius: 50px;
+  }
+  
+  .payout-list::-webkit-scrollbar-thumb:hover {
+    background: #08b2fb;
+  }
+
+.market-details .payout-list li{
+    margin: 0;
+    padding: 0 5px;
+}
+
+.payout-btn ion-icon{
+    padding: 0;
+    vertical-align: middle;
+}
+
+.market-details div:nth-of-type(5) p{
+    display: inline-block;
+}
+/* ----------NEW MARKETS STYLE 28.6.---------- */
+
+/* NET COMPANIES FILTER STYLE */
+
+
+
+/* NET COMPANIES FILTER STYLE */

@@ -1,0 +1,85 @@
+.tabs-container form input, .tabs-container form select, .tabs-container form textarea{
+    border:1px solid #6b6f7642;
+    border-radius: 3px;
+    transition: .3s;
+}
+
+.tabs-container form textarea{
+    cursor: text;
+    transition: .3s;
+}
+
+.tabs-container form input:focus-visible, .tabs-container form textarea:focus-visible{
+    outline: 1px solid #4ac6f7;
+    border: 1px solid #4ac6f7;
+}
+
+.tabs-container form input, .tabs-container form select{
+    padding: 8px 10px;
+    width: 100%;
+    max-width: 250px;
+    background-color: #fff;
+}
+
+.tabs-container form select{
+    cursor: pointer;
+    max-width: 270px;
+}
+
+.tabs-container form select:focus-visible{
+    outline: 1px solid #4ac6f7;
+    border: 1px solid #4ac6f7;
+}
+
+input[type="file"]::-webkit-file-upload-button{
+    background-color: var(--hover_color);
+    color: var(--bg_white);
+    border: 1px solid var(--hover_color);
+    font-size: 16px;
+    border-radius: 3px;
+    transition: var(--transition_time);
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+input[type="file"]::-webkit-file-upload-button:hover{
+    background-color: #08b2fb;
+    
+}
+
+/*---RESPONSIVE---*/
+
+@media(max-width: 768px){
+.tabs-container form input, .tabs-container form select, .tabs-container form textarea{
+    max-width: none;
+    box-sizing: border-box;
+}
+}
+
+/*---RESPONSIVE---*/
+
+
+/* EXIT FORM BUTTON */
+
+.exit_form{
+    right: 115px;
+    margin-top: -1px;
+    background-color: var(--hover_color);
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    padding: 5px 5px 0;
+    border-radius: 3px;
+    transition: var(--transition_time);
+    position: absolute;
+}
+
+.exit_form:hover{
+    background-color: #08b2fb;
+}
+.exit_form ion-icon{
+    padding: 0;
+}
+
+
+/* EXIT FORM BUTTON */
