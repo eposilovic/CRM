@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contract Edit</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no;”" />
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/networks-list-style.css">
+    <link rel="stylesheet" href="style/network-profile-style.css">
+    <link rel="stylesheet" href="style/tab-edit-style.css">
+<body>
+    <aside class="main-sidebar">
+        <div class="sidebar-container">
+            <nav>
+                <ul>
+                    <li><a href="#_" title="Networks"><ion-icon name="globe-outline"></ion-icon><span class="sidebar-title">Networks</span></a></li>
+                    <li><a href="#_" title="My Work"><ion-icon name="briefcase-outline"></ion-icon><span class="sidebar-title">My Work</span></a></li>
+                    <li><a href="#_" title="My Meetings"><ion-icon name="calendar-outline"></ion-icon><span class="sidebar-title">My Meetings</span></a></li>
+                    <li><a href="#_" title="My Contacts"><ion-icon name="library-outline"></ion-icon><span class="sidebar-title">My Contacts</span></a></li>
+                    <li><a href="#_" title="Markets"><ion-icon name="storefront-outline"></ion-icon><span class="sidebar-title">Markets</span></a></li>
+                    <li><a href="#_" title="Organization"><ion-icon name="people-outline"></ion-icon><span class="sidebar-title">Organization</span></a></li>
+                    <li><a href="#_" title="My Profile"><ion-icon name="people-outline"></ion-icon><span class="sidebar-title">My Profile</span></a></li>
+                    <li class="collapse-sidebar"><a href="#_"><ion-icon name="play-skip-back-outline"></ion-icon></a></li>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+    <header class="main-header">
+        <div class="logo-container">
+            <a href="#_">
+                <img class="logo-img" src="img/logo.svg" alt="IDB CRM Logo">
+            </a>
+        </div>
+        <div class="header-right">
+            <div class="header-right-icons">
+                <ul>
+                   <li><a href="#_" title="Notifications"><ion-icon name="notifications-outline"></ion-icon></a></li>
+                   <li class="create-task-button"><a href="#_"><ion-icon name="add-outline"></ion-icon>Create Task</a></li>
+                   <li class="li-profile-img"><a href="#_">Ime Prezime <img class="header-profile-pic" src="img/profile-pic.jpg" alt=""></a>
+                        <div class="profile-dropdown">
+                            <a href="#_"><ion-icon name="person-outline"></ion-icon> My Profile</a> 
+                            <a href="#_"><ion-icon name="options-outline"></ion-icon> Panel</a>
+                            <a href="#_"><ion-icon name="settings-outline"></ion-icon> Settings</a>
+                            <a href="#_"><ion-icon name="exit-outline"></ion-icon> Logout</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <div class="main-container">
+            <div class="profile-wrapper">
+                <img class="profile-img" src="img/user-1.jpg" alt="">
+                <h1 class="profile-name">Marley Navarro</h1>
+                <span class="profile-title">IT Batman</span>
+                <span class="profile-country"><ion-icon name="earth-outline"></ion-icon>Georgia</span>
+                <span class="profile-mail"><ion-icon name="mail-outline"></ion-icon><a href="mailto:marleynavarro@gmail.com">marleynavarro@gmail.com</a></span>
+                <span class="profile-phone"><ion-icon name="call-outline"></ion-icon><a href="tel:+49-69-20570-001">+49-69-20570-001</a></span>
+                <button class="profile-edit"><ion-icon name="create-outline"></ion-icon>Edit profile</button>
+            </div> 
+            <div class="tabs-container">   
+                <div class="profile-tabs">
+                    <button id="tablinks1" class="tablinks"><ion-icon name="person-circle"></ion-icon>Profile</button>
+                    <button id="tablinks2" class="tablinks"><ion-icon name="person-add"></ion-icon>Contacts</button>
+                    <button id="tablinks3" class="tablinks"><ion-icon name="business"></ion-icon>Company</button>
+                    <button id="tablinks4" class="tablinks tab-bg"><ion-icon name="document-text"></ion-icon>Contract</button>
+                    <button id="tablinks5" class="tablinks"><ion-icon name="pricetag"></ion-icon>Offers</button>
+                    <button id="tablinks6" class="tablinks"><ion-icon name="people-circle"></ion-icon>Partners</button>
+                    <button id="tablinks7" class="tablinks"><ion-icon name="information-circle"></ion-icon>Country Network Core Info</button>
+                    <button id="tablinks8" class="tablinks"><ion-icon name="chatbubbles"></ion-icon>Correspondence</button>
+                </div>
+                <div id="tab1" class="tab-content profile-tab-edit">
+                    <form action="/action_page.php" id="profile-edit-form">
+                    <div class="tab-content-wrapper">
+                        <h2>Contract Information</h2>
+                        <h4>Contract Type</h4>
+                        <input type="text" name="contract_type">
+                        <h4>Contract Signed</h4>
+                        <select name="contract_signed">
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                        <h4>Pixel</h4>
+                        <input type="text" name="pixel">
+                        <h4>Payout</h4>
+                        <input type="number" name="payout">
+                        <h4>Cap</h4>
+                        <input type="text" name="cap">
+                    </div>
+                    <div class="tab-content-wrapper">
+                        <h2>Contract List</h2>
+                        <h4>Contract Start Date</h4>
+                        <input type="datetime-local" name="contract_start_date">
+                        <h4>Contract Expiration Date</h4>
+                        <input type="datetime-local" name="contract_expiration_date">
+                        <h4>Contract URL</h4>
+                        <input type="text" name="contract_url">
+                    </div>
+                    <div class="tab-content-wrapper">
+                        <h2>Notes</h2>
+                        <textarea name="note" cols="30" rows="5" placeholder="These are some notes about Batman. There is not much to say except that he is indeed, Batman."></textarea>
+                    </div>
+                    <button type="submit" class="tab-edit-button tab-save-button" form="profile-edit-form"><ion-icon name="save"></ion-icon>Save</button>
+                </form>
+                </div>
+            </div>
+            <footer><hr>Copyright © 2021 <b>IDB Mobile Technology</b></footer>
+        </div>
+    </main>
+  
+    
+  
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="js/networks-list-filter.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="js/responsive.js"></script>
+    <script>
+        //COLLAPSE SIDEBAR
+        $(".collapse-sidebar").on("click", function(){
+            $(".main-sidebar").toggleClass("collapsed-sidebar");
+            $(".sidebar-title").delay(50).toggle(0);
+            $(".main-container").toggleClass("collapsed-main");
+            $(".collapse-sidebar ion-icon").toggleClass("rotate");
+        });
+    </script>
+    <script>
+        //PROFILE DROPDOWN
+        $(".li-profile-img").on("click", function(){
+            $(".profile-dropdown").slideToggle(200);
+        });
+    </script>
+      <script>
+        //CLICK OUTSIDE CLOSE DROPDOWN
+        $(".main-container").on("click", function(){
+            $(".notification-dropdown").slideUp(200);
+            $(".profile-dropdown").slideUp(200);
+        });
+    </script>
+</body>
+</head>
+</html>

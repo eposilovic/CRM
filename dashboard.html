@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IDB CRM</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no;”" />
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/networks-list-style.css">
+<body>
+    <aside class="main-sidebar">
+        <div class="sidebar-container">
+            <nav>
+                <ul>
+                    <li><a href="#_" title="Networks"><ion-icon name="globe-outline"></ion-icon><span class="sidebar-title">Networks</span></a></li>
+                    <li><a href="#_" title="My Work"><ion-icon name="briefcase-outline"></ion-icon><span class="sidebar-title">My Work</span></a></li>
+                    <li><a href="#_" title="My Meetings"><ion-icon name="calendar-outline"></ion-icon><span class="sidebar-title">My Meetings</span></a></li>
+                    <li><a href="#_" title="My Contacts"><ion-icon name="library-outline"></ion-icon><span class="sidebar-title">My Contacts</span></a></li>
+                    <li><a href="#_" title="Markets"><ion-icon name="storefront-outline"></ion-icon><span class="sidebar-title">Markets</span></a></li>
+                    <li><a href="#_" title="Organization"><ion-icon name="people-outline"></ion-icon><span class="sidebar-title">Organization</span></a></li>
+                    <li><a href="#_" title="My Profile"><ion-icon name="people-outline"></ion-icon><span class="sidebar-title">My Profile</span></a></li>
+                    <li class="collapse-sidebar"><a href="#_"><ion-icon name="play-skip-back-outline"></ion-icon></a></li>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+    <header class="main-header">
+        <div class="logo-container">
+            <a href="#_">
+                <img class="logo-img" src="img/logo.svg" alt="IDB CRM Logo">
+            </a>
+        </div>
+        <div class="header-right">
+            <div class="header-right-icons">
+                <ul>
+                   <li>
+                       <a href="#_" title="Notifications"><span class="notification-counter">10</span><ion-icon name="notifications-outline"></ion-icon></a>
+                       <div class="notification-dropdown">
+                           <ul>
+                               <li><a href="#"><ion-icon name="calendar-outline"></ion-icon>Meeting #1
+                                <span class="notification-desc">Meeting description</span></a>
+                               </li>
+                               <li><a href="#"><ion-icon name="reader-outline"></ion-icon>Task #1
+                                <span class="notification-desc">Task description - This time a longer one</span></a>    
+                                </li>
+                               <li><a href="#"><ion-icon name="reader-outline"></ion-icon>Task #2
+                                <span class="notification-desc">Task description</span></a>
+                            </li>
+                               <li><a href="#"><ion-icon name="calendar-outline"></ion-icon>Meeting #2
+                                <span class="notification-desc">Meeting description</span></a>
+                            </li>
+                               <li><a href="#"><ion-icon name="calendar-outline"></ion-icon>Meeting #3
+                                <span class="notification-desc">Meeting description</span></a>
+                        </li>
+                               <li><a href="#"><ion-icon name="calendar-outline"></ion-icon>Meeting #4
+                                <span class="notification-desc">Meeting description</span></a>
+                        </li>
+                               <li><a href="#"><ion-icon name="calendar-outline"></ion-icon>Meeting #5
+                                <span class="notification-desc">Meeting description</span></a>
+                        </li>
+                               <li><a href="#"><ion-icon name="reader-outline"></ion-icon>Task #3
+                                <span class="notification-desc">Task description</span></a>
+                        </li>
+                               <li><a href="#"><ion-icon name="calendar-outline"></ion-icon>Meeting #6
+                                <span class="notification-desc">Meeting description</span></a>
+                        </li>
+                               <li><a href="#"><ion-icon name="reader-outline"></ion-icon>Task #4
+                                <span class="notification-desc">Task description</span></a>
+                        </li>
+                           </ul>
+                           <button>View All</button>
+                       </div>
+                   </li>
+                   <li class="create-task-button"><a href="#_"><ion-icon name="add-outline"></ion-icon>Create Task</a></li>
+                   <li class="li-profile-img"><a href="#_">Ime Prezime <img class="header-profile-pic" src="img/profile-pic.jpg" alt=""></a>
+                        <div class="profile-dropdown">
+                            <a href="#_"><ion-icon name="person-outline"></ion-icon> My Profile</a> 
+                            <a href="#_"><ion-icon name="options-outline"></ion-icon> Panel</a>
+                            <a href="#_"><ion-icon name="settings-outline"></ion-icon> Settings</a>
+                            <a href="#_"><ion-icon name="exit-outline"></ion-icon> Logout</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <div class="main-container">
+            <h1>Networks <span class="networks-total">(15 total)</span></h1>
+            <button class="create_net_button"><a href="#"><ion-icon name="person-add"></ion-icon>Create Network</a></button>
+            <button class="delete_net_profiles"><a href="#"><ion-icon name="trash"></ion-icon> Delete Network Profile</a></button>
+            <div class="networks-search-wrap">
+                <form action="/action_page.php">
+                   
+                    <input class="networks-search" type="search" placeholder="Search Networks">
+                    <button class="networks-search-button" type="submit"><ion-icon name="search-outline"></ion-icon> </button>
+                </form>
+            </div>
+            <!--<div class="networks-filter">
+                <button onclick="myFunction()" class="dropbtn"><ion-icon name="earth-outline"></ion-icon>Countries <ion-icon name="chevron-down-outline"></ion-icon></button>
+                <div id="myDropdown" class="dropdown-content">
+                  <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+                    <div class="country-wrapper">
+                        <a href="#_" class="all_countries"><img class="flag-img" src="img/earth-outline.svg" alt=""> All Countries</a>
+                        <a href="#_" class="georgia"><img class="flag-img" src="img/flags/georgia_flag.png" alt=""> Georgia</a>
+                        <a href="#_" class="greece"><img class="flag-img" src="img/flags/greece_flag.png" alt=""> Greece</a>
+                        <a href="#_" class="indonesia"><img class="flag-img" src="img/flags/indonesia_flag.png" alt=""> Indonesia</a>
+                        <a href="#_" class="ivorycoast"><img class="flag-img" src="img/flags/ivorycoast_flag.png" alt=""> Ivory Coast</a>
+                        <a href="#_" class="katar"><img class="flag-img" src="img/flags/katar_flag.png" alt=""> Katar</a>
+                        <a href="#_" class="oman"><img class="flag-img" src="img/flags/oman_flag.png" alt=""> Oman</a>
+                        <a href="#_" class="pakistan"><img class="flag-img" src="img/flags/pakistan_flag.png" alt=""> Pakistan</a>
+                        <a href="#_" class="saudiarabia"><img class="flag-img" src="img/flags/saudiarabia_flag.png" alt=""> Saudi Arabia</a>
+                    </div>
+                </div>
+            </div>-->
+            <div class="networks-list-wrapper">
+                <ul class="networks-list">
+                    <li class="georgia">
+                        <div>
+                            <img src="img/user-1.jpg" alt="">
+                                <span>
+                                    <p>Marley Navarro</p>
+                                    <p>marleynavarro@gmail.com</p>
+                                </span>
+                        </div>
+                        <div>
+                            <p>Nestle</p>
+                        </div>
+                        <div>
+                            <p><img class="flag-img" src="img/flags/georgia_flag.png" alt=""> Georgia</p>
+                        </div>
+                        <div>
+                            <button><ion-icon name="list"></ion-icon>View Details</button>
+                        </div>
+                        <span class="trash-network-prof">
+                            <ion-icon name="trash-bin"></ion-icon>
+                        </span>
+                    </li>
+
+                    <li class="greece">
+                        <div>
+                            <img src="img/user-2.jpg" alt="">
+                                <span>
+                                    <p>Vienna Clark</p>
+                                    <p>viennaclark@gmail.com</p>
+                                </span>
+                        </div>
+                        <div>
+                            <p>MTV</p>
+                        </div>
+                        <div>
+                            <p><img class="flag-img" src="img/flags/greece_flag.png" alt=""> Greece</p>
+                        </div>
+                        <div>
+                            <button><ion-icon name="list"></ion-icon>View Details</button>
+                        </div>
+                        <span class="trash-network-prof">
+                            <ion-icon name="trash-bin"></ion-icon>
+                        </span>
+                    </li>
+
+                    <li class="indonesia">
+                        <div>
+                            <img src="img/user-3.jpg" alt="">
+                                <span>
+                                    <p>Willa Carrillo</p>
+                                    <p>willacarrillo@gmail.com</p>
+                                </span>
+                        </div>
+                        <div>
+                            <p>Disney</p>
+                        </div>
+                        <div>
+                            <p><img class="flag-img" src="img/flags/indonesia_flag.png" alt=""> Indonesia</p>
+                        </div>
+                        <div>
+                            <button><ion-icon name="list"></ion-icon>View Details</button>
+                        </div>
+                        <span class="trash-network-prof">
+                            <ion-icon name="trash-bin"></ion-icon>
+                        </span>
+                    </li>
+
+                    <li class="ivorycoast">
+                        <div>
+                            <img src="img/user-4.jpeg" alt="">
+                                <span>
+                                    <p>Menaal Villalobos</p>
+                                    <p>menaalvillalobos@hotmail.com</p>
+                                </span>
+                        </div>
+                        <div>
+                            <p>Mercedes-Benz</p>
+                        </div>
+                        <div>
+                            <p><img class="flag-img" src="img/flags/ivorycoast_flag.png" alt=""> Ivory Coast</p>
+                        </div>
+                        <div>
+                            <button><ion-icon name="list"></ion-icon>View Details</button>
+                        </div>
+                        <span class="trash-network-prof">
+                            <ion-icon name="trash-bin"></ion-icon>
+                        </span>
+                    </li>
+
+                    <li class="katar">
+                        <div>
+                            <img src="img/user-5.jpg" alt="">
+                                <span>
+                                    <p>Ralphie Marsden</p>
+                                    <p>ralphiemarsden@gmail.com</p>
+                                </span>
+                        </div>
+                        <div>
+                            <p>Kellogg's</p>
+                        </div>
+                        <div>
+                            <p><img class="flag-img" src="img/flags/katar_flag.png" alt=""> Katar</p>
+                        </div>
+                        <div>
+                            <button><ion-icon name="list"></ion-icon>View Details</button>
+                        </div>
+                        <span class="trash-network-prof">
+                            <ion-icon name="trash-bin"></ion-icon>
+                        </span>
+                    </li>
+
+                    <li class="oman">
+                        <div>
+                            <img src="img/user-6.jpg" alt="">
+                                <span>
+                                    <p>Elijah Shepherd</p>
+                                    <p>elijah.shepherd@gmail.com</p>
+                                </span>
+                        </div>
+                        <div>
+                            <p>Amazon</p>
+                        </div>
+                        <div>
+                            <p><img class="flag-img" src="img/flags/oman_flag.png" alt=""> Oman</p>
+                        </div>
+                        <div>
+                            <button><ion-icon name="list"></ion-icon>View Details</button>
+                        </div>
+                        <span class="trash-network-prof">
+                            <ion-icon name="trash-bin"></ion-icon>
+                        </span>
+                    </li>
+                    
+                    <li class="pakistan">
+                        <div>
+                            <img src="img/user-7.jpg" alt="">
+                                <span>
+                                    <p>Ted Graves</p>
+                                    <p>tedgraves@gmail.com</p>
+                                </span>
+                        </div>
+                        <div>
+                            <p>Lacoste</p>
+                        </div>
+                        <div>
+                            <p><img class="flag-img" src="img/flags/pakistan_flag.png" alt=""> Pakistan</p>
+                        </div>
+                        <div>
+                            <button><ion-icon name="list"></ion-icon>View Details</button>
+                        </div>
+                        <span class="trash-network-prof">
+                            <ion-icon name="trash-bin"></ion-icon>
+                        </span>
+                    </li>
+
+                    <li class="saudiarabia">
+                        <div>
+                            <img src="img/user-8.jpg" alt="">
+                                <span>
+                                    <p>Polly Hopkins</p>
+                                    <p>polly.hopkins@hotmail.com</p>
+                                </span>
+                        </div>
+                        <div>
+                            <p>Burger King</p>
+                        </div>
+                        <div>
+                            <p><img class="flag-img" src="img/flags/saudiarabia_flag.png" alt=""> Saudi Arabia</p>
+                        </div>
+                        <div>
+                            <button><ion-icon name="list"></ion-icon>View Details</button>
+                        </div>
+                        <span class="trash-network-prof">
+                            <ion-icon name="trash-bin"></ion-icon>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+            <footer><hr>Copyright © 2021 <b>IDB Mobile Technology</b></footer>
+        </div>
+        <div class="create-network-popup">
+            <div class="popup-wrap">
+                <ion-icon name="close" class="close-popup"></ion-icon>
+                <h2>Create Network</h2>
+                <form action="" id="create-network-form">
+                    <span>
+                        <label>First Name</label>
+                        <input type="text" name="name" placeholder="First Name">
+                    </span>
+                    <span>
+                        <label>Last Name</label>
+                        <input type="text" name="lastname" placeholder="Last Name">
+                    </span>
+                    <span>
+                        <label>Date of Birth</label>
+                        <input type="date" name="birth_date" placeholder="Date of Birth">
+                    </span>
+                    <span>
+                        <label>Education</label>
+                        <input type="text" name="educaton_range" placeholder="Education">
+                    </span>
+                    <span>
+                        <label>College Degree</label>
+                        <input type="text" name="collage_degree_field" placeholder="College Degree">
+                    </span>
+                    <span>
+                        <label>Gender</label>
+                        <select name="gender">
+                            <option value="Male" name="m">Male</option>
+                            <option value="Male" name="f">Female</option>
+                            <option value="Male" name="u">Undefined</option>
+                        </select>
+                    </span>
+                    <span>
+                        <label>Hobby</label>
+                        <input type="text" name="hobi" placeholder="Hobby">
+                    </span>
+                    <span>
+                        <label>Relationship Status</label>
+                        <input type="text" name="relationship status" placeholder="Relationship Status">
+                    </span>
+                    <span>
+                        <label>Family Members</label>
+                        <input type="number" name="family_members(count)" placeholder="Family Members">
+                    </span>
+                    <span>
+                        <label>Children</label>
+                        <input type="number" name="children_number" placeholder="Children">
+                    </span>
+                    <span>
+                        <label>Pets</label>
+                        <input type="text" name="pets" placeholder="Pets">
+                    </span>
+                    <span>
+                        <label>Profile Image</label>
+                        <input type="file" name="snip_attachment" accept="image/*">
+                    </span>
+                    <span>
+                        <textarea name="network_user_note" cols="30" rows="5" placeholder="Write some notes here..."></textarea>
+                    </span>
+                        <button type="submit" class="tab-edit-button tab-save-button save-network" form="create-network-form"><ion-icon name="save"></ion-icon>Save Network</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="delete-network-prof-wrap">
+            <div class="delete-network-prof-popup">
+                <ion-icon name="alert-outline"></ion-icon>
+                <h2 class="delete-h2">This will <span>permanently delete</span> the selected network. Are you sure?</h2>
+                <button class="delete-net-prof-yes">Yes</button>
+                <button class="delete-net-prof-no">No</button>
+            </div>
+        </div>
+        <div class="networks-list-empty">
+            <h3>Network profiles list is empty, please create a network profile.</h3>
+        </div>
+    </main>
+  
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="js/networks-list-filter.js"></script>
+    <script src="js/responsive.js"></script>
+
+    <script>
+        //COUNTRY FILTER
+        $(".country-wrapper a").on("click", function(){
+            $(".dropdown-content").removeClass("show");
+        });
+
+        $('.country-wrapper a').click(function() {
+            var ourClass = $(this).attr('class');
+            if(ourClass == 'all_countries') {
+                $('.networks-list').children('li').show();
+            }
+            else {
+                $('.networks-list').children('li:not(.' + ourClass + ')').hide();
+                $('.networks-list').children('li.' + ourClass).show();
+            }
+        });
+    </script>
+    <script>
+        //COLLAPSE SIDEBAR
+        $(".collapse-sidebar").on("click", function(){
+            $(".main-sidebar").toggleClass("collapsed-sidebar");
+            $(".sidebar-title").delay(50).toggle(0);
+            $(".main-container").toggleClass("collapsed-main");
+            $(".collapse-sidebar ion-icon").toggleClass("rotate");
+        });
+    </script>
+    <script>
+        //PROFILE DROPDOWN
+        $(".li-profile-img").on("click", function(){
+            $(".profile-dropdown").slideToggle(200);
+            $(".notification-dropdown").slideUp(200);
+        });
+    </script>
+    <script>
+        //CREATE NETWORK POPUP
+        $(".create_net_button").on("click", function(){
+            $(".create-network-popup").fadeIn();
+        });
+        $(".close-popup").on("click", function(){
+            $(".create-network-popup").fadeOut();
+            $("#create-network-form input, #create-network-form textarea, #create-network-form select").val(""); 
+        });
+    </script>
+    <script>
+        //DELETE NETWORK Profile
+        $(".delete_net_profiles").on("click", function(){
+
+            $(".networks-list .trash-network-prof").fadeToggle();
+            $(this).toggleClass("delete-pressed");
+
+                if($(".delete_net_profiles").hasClass("delete-pressed"))
+                {
+                    $(".delete_net_profiles a").contents().last().replaceWith(" Finish Deleting");
+                }
+
+                else
+                {
+                    $(".delete_net_profiles a").contents().last().replaceWith(" Delete Network Profile");
+                }
+
+        });
+
+        $(document).on("click", ".trash-network-prof", function(event) {
+
+            var target = $(event.currentTarget);
+            event.stopPropagation()
+
+                $(".delete-network-prof-wrap").fadeIn("fast");
+
+                $(".delete-net-prof-yes").unbind().on("click", function(){
+                    $(".delete-network-prof-wrap").fadeOut("fast");
+
+                    $(target).parent().animate({
+                        opacity:0,
+                        marginRight:"-100%",
+                        marginLeft:"100%"
+                    },700, 'linear', function(){
+                    
+                        $(this).remove();
+                    
+                    });
+                });
+        });
+
+        $(".delete-net-prof-no").on("click", function(){
+            $(".delete-network-prof-wrap").fadeOut("fast");
+        });
+
+    </script>
+    <script>
+        //NOTIFICATION DROPDOWN
+        $(".header-right-icons ul li:first-child").on("click", function(){
+            $(".notification-dropdown").slideToggle(200);
+            $(".profile-dropdown").slideUp(200);
+        });
+    </script>
+    <script>
+        //CLICK OUTSIDE CLOSE DROPDOWN
+        $(".main-container").on("click", function(){
+            $(".notification-dropdown").slideUp(200);
+            $(".profile-dropdown").slideUp(200);
+        });
+    </script>
+    <script>
+        //SAVE NETWORK
+        $(".save-network").on("click", function(){
+
+            var network_name = $("input[name=name]").val();
+            var network_last_name = $("input[name=lastname]").val();
+
+            if(($("input[name=name]").val().length >0)){
+
+            var new_network_li = $("<li><div><img src='img/profile-pic.jpg'><span><p>" + network_name + " " + network_last_name + "</p><p></p></span></div><div><p></p></div><div><p><img class='flag-img' src=''></p></div><div><button><ion-icon name='list'='img'class='md hydrated' aria-label='list'></ion-icon>View Details</button></div><span class='trash-network-prof'><ion-icon name='trash-bin'='img'='md hydrated' aria-label='trash bin'></ion-icon></span></li>").hide();
+
+            $(".networks-list li:last-child").after(new_network_li);
+            new_network_li.fadeIn(600);
+
+            $(".create-network-popup").fadeOut();
+
+            $("#create-network-form input, #create-network-form textarea, #create-network-form select").val(""); 
+
+            }
+        });
+    </script>
+    <script>
+        // SHOW MESSAGE WHEN NETWORK COMPANIES LIST EMPTY
+        $(document).on("click",".delete-net-prof-yes" ,function(){
+
+            if($(".networks-list li").length < 2)
+
+             {
+                 $(".networks-list-empty").delay(800).fadeIn(200);
+                 $(".delete_net_profiles").removeClass("delete-pressed");
+                 $(".delete_net_profiles a").contents().last().replaceWith(" Delete Network Profile");
+             }
+
+        });
+    </script>
+</body>
+</head>
+</html>

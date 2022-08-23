@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IDB CRM - Dashboard</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no;”" />
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/networks-list-style.css">
+<body>
+    <aside class="main-sidebar">
+        <div class="sidebar-container">
+            <nav>
+                <ul>
+                    <li class="drop"><a href="#_" title="Organization"><ion-icon name="people-outline"></ion-icon><span class="sidebar-title">Organization <ion-icon name="chevron-down-outline" class="drop_icon"></ion-icon></a>
+                        <ul class="side_drop">
+                            <li><a href="#_" title="Operations" class="sidebar-title"><ion-icon name="cog-outline"></ion-icon> Operations</a></li>
+                            <li><a href="#_" title="Marketing" class="sidebar-title"><ion-icon name="megaphone-outline"></ion-icon> Marketing</a></li>
+                        </ul>
+                    </span></li>
+                    <li class="drop"><a href="#_" title="Organization"><ion-icon name="cog-outline"></ion-icon><span class="sidebar-title">Operations <ion-icon name="chevron-down-outline" class="drop_icon"></ion-icon></a>
+                        <ul class="side_drop">
+                            <li><a href="#_" title="Operations" class="sidebar-title"><ion-icon name="calendar-number-outline"></ion-icon> Events</a></li>
+                            <li><a href="#_" title="Marketing" class="sidebar-title"><ion-icon name="phone-portrait-outline"></ion-icon> Providers</a></li>
+                            <li><a href="#_" title="Marketing" class="sidebar-title"><ion-icon name="earth-outline"></ion-icon> Domains</a></li>
+                            <li><a href="#_" title="Marketing" class="sidebar-title"><ion-icon name="star-outline"></ion-icon> Highlights</a></li>
+                            <li><a href="#_" title="Marketing" class="sidebar-title"><ion-icon name="calendar-outline"></ion-icon> Meetings</a></li>
+                            <li><a href="#_" title="Marketing" class="sidebar-title"><ion-icon name="storefront-outline"></ion-icon> Markets</a></li>
+                        </ul>
+                    </span></li>
+                    <li><a href="#_" title="Networks"><ion-icon name="globe-outline"></ion-icon><span class="sidebar-title">Networks</span></a></li>
+                    <li><a href="#_" title="My Contacts"><ion-icon name="library-outline"></ion-icon><span class="sidebar-title">My Contacts</span></a></li>
+                    <li><a href="#_" title="Markets"><ion-icon name="storefront-outline"></ion-icon><span class="sidebar-title">Markets</ion-icon></span></a></li>
+                    <li><a href="#_" title="My Profile"><ion-icon name="people-outline"></ion-icon><span class="sidebar-title">My Profile</span></a></li>
+                    <li class="collapse-sidebar"><a href="#_"><ion-icon name="play-skip-back-outline"></ion-icon></a></li>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+    <header class="main-header">
+        <div class="logo-container">
+            <a href="#_">
+                <img class="logo-img" src="img/logo.svg" alt="IDB CRM Logo">
+            </a>
+        </div>
+        <div class="header-right">
+            <div class="header-right-icons">
+                <ul>
+                   <li>
+                       <a href="#_" title="Notifications"><span class="notification-counter">10</span><ion-icon name="notifications-outline"></ion-icon></a>
+                       <div class="notification-dropdown">
+                           <ul>
+                               <li><a href="#"><ion-icon name="calendar-outline"></ion-icon>Meeting #1
+                                <span class="notification-desc">Meeting description</span></a>
+                               </li>
+                               <li><a href="#"><ion-icon name="reader-outline"></ion-icon>Task #1
+                                <span class="notification-desc">Task description - This time a longer one</span></a>    
+                                </li>
+                               <li><a href="#"><ion-icon name="reader-outline"></ion-icon>Task #2
+                                <span class="notification-desc">Task description</span></a>
+                            </li>
+                               <li><a href="#"><ion-icon name="calendar-outline"></ion-icon>Meeting #2
+                                <span class="notification-desc">Meeting description</span></a>
+                            </li>
+                               <li><a href="#"><ion-icon name="calendar-outline"></ion-icon>Meeting #3
+                                <span class="notification-desc">Meeting description</span></a>
+                        </li>
+                               <li><a href="#"><ion-icon name="calendar-outline"></ion-icon>Meeting #4
+                                <span class="notification-desc">Meeting description</span></a>
+                        </li>
+                               <li><a href="#"><ion-icon name="calendar-outline"></ion-icon>Meeting #5
+                                <span class="notification-desc">Meeting description</span></a>
+                        </li>
+                               <li><a href="#"><ion-icon name="reader-outline"></ion-icon>Task #3
+                                <span class="notification-desc">Task description</span></a>
+                        </li>
+                               <li><a href="#"><ion-icon name="calendar-outline"></ion-icon>Meeting #6
+                                <span class="notification-desc">Meeting description</span></a>
+                        </li>
+                               <li><a href="#"><ion-icon name="reader-outline"></ion-icon>Task #4
+                                <span class="notification-desc">Task description</span></a>
+                        </li>
+                           </ul>
+                           <button>View All</button>
+                       </div>
+                   </li>
+                   <li class="create-task-button"><a href="#_"><ion-icon name="add-outline"></ion-icon>Create Task</a></li>
+                   <li class="li-profile-img"><a href="#_">Ime Prezime <img class="header-profile-pic" src="img/profile-pic.jpg" alt=""></a>
+                        <div class="profile-dropdown">
+                            <a href="#_"><ion-icon name="person-outline"></ion-icon> My Profile</a> 
+                            <a href="#_"><ion-icon name="options-outline"></ion-icon> Panel</a>
+                            <a href="#_"><ion-icon name="settings-outline"></ion-icon> Settings</a>
+                            <a href="#_"><ion-icon name="exit-outline"></ion-icon> Logout</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <div class="main-container">
+            <h1>Dashboard</h1>
+                <div class="chart-btn-wrap">
+                    <button class="chart-1"><ion-icon name="earth-outline"></ion-icon> Marketing</button>
+                    <button class="chart-2"><ion-icon name="earth-outline"></ion-icon> Operations</button>
+                </div>
+            <div class="map-wrap">
+                <div class="stats-wrap">
+                    <div class="cores-stats">
+                        <ion-icon name="mail-sharp"></ion-icon>
+                        <h4 class="cores-today">12</h4>
+                        <h4>Correspondence today</h4>
+                        <h4 class="cores-total">51</h4>
+                        <h4>Correspondence in total</h4>
+                    </div>
+                    <div class="contacts-stats">
+                        <ion-icon name="business-sharp"></ion-icon>
+                        <h4 class="contacts-total">15</h4>
+                        <h4>Network contacts total</h4>
+                        <h4 class="companies-total">10</h4>
+                        <h4>Network companies total</h4>
+                    </div>
+                    <div class="contracts-stats">
+                        <ion-icon name="document-text-sharp"></ion-icon>
+                        <table>
+                            <tr>
+                                <th>Company Name</th>
+                                <th>Contract Expiry Date</th>
+                                <th>Country</th>
+                            </tr>
+                            <tr>
+                                <td class="contr-company-name">Name of Company</td>
+                                <td class="contract-expires">10.12.2022.</td>
+                                <td class="contr-country-name">Egypt</td>
+                            </tr>
+                            <tr>
+                                <td class="contr-company-name">Another Company</td>
+                                <td class="contract-expires">15.06.2023.</td>
+                                <td class="contr-country-name">Saudi Arabia</td>
+                            </tr>
+                            <tr>
+                                <td class="contr-company-name">Company Name</td>
+                                <td class="contract-expires">08.07.2023.</td>
+                                <td class="contr-country-name">Pakistan</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div id="chartdiv"> 
+                    <div class="percent-wrap">
+                        <p><span class="countries-taken">18</span> of 195 countries</p>    
+                        <p><span class="countries-taken-percent">9%</span> World domination</p>
+                    </div>
+                </div>
+
+                <div id="chartdiv2">
+                    <div class="percent-wrap">
+                        <p><span class="countries-taken">17</span> of 195 countries</p>    
+                        <p><span class="countries-taken-percent">9%</span> World domination</p>
+                    </div>
+            </div>   
+            </div>
+
+            <!-- <div class="dept-success">
+                <ion-icon name="checkmark-circle"></ion-icon>
+                <h2>You have successfully selected your department. Please continue</h2>
+                <button><ion-icon name="bar-chart"></ion-icon> Return to dashboard </button>
+            </div> -->
+            <footer><hr>Copyright © 2021 <b>IDB Mobile Technology</b></footer>
+        </div>
+        <div class="create-network-popup">
+            <div class="popup-wrap">
+                <ion-icon name="close" class="close-popup"></ion-icon>
+                <h2>Create Network</h2>
+                <form action="" id="create-network-form">
+                    <span>
+                        <label>First Name</label>
+                        <input type="text" name="name" placeholder="First Name">
+                    </span>
+                    <span>
+                        <label>Last Name</label>
+                        <input type="text" name="lastname" placeholder="Last Name">
+                    </span>
+                    <span>
+                        <label>Date of Birth</label>
+                        <input type="date" name="birth_date" placeholder="Date of Birth">
+                    </span>
+                    <span>
+                        <label>Education</label>
+                        <input type="text" name="educaton_range" placeholder="Education">
+                    </span>
+                    <span>
+                        <label>College Degree</label>
+                        <input type="text" name="collage_degree_field" placeholder="College Degree">
+                    </span>
+                    <span>
+                        <label>Gender</label>
+                        <select name="gender">
+                            <option value="Male" name="m">Male</option>
+                            <option value="Male" name="f">Female</option>
+                            <option value="Male" name="u">Undefined</option>
+                        </select>
+                    </span>
+                    <span>
+                        <label>Hobby</label>
+                        <input type="text" name="hobi" placeholder="Hobby">
+                    </span>
+                    <span>
+                        <label>Relationship Status</label>
+                        <input type="text" name="relationship status" placeholder="Relationship Status">
+                    </span>
+                    <span>
+                        <label>Family Members</label>
+                        <input type="number" name="family_members(count)" placeholder="Family Members">
+                    </span>
+                    <span>
+                        <label>Children</label>
+                        <input type="number" name="children_number" placeholder="Children">
+                    </span>
+                    <span>
+                        <label>Pets</label>
+                        <input type="text" name="pets" placeholder="Pets">
+                    </span>
+                    <span>
+                        <label>Profile Image</label>
+                        <input type="file" name="snip_attachment" accept="image/*">
+                    </span>
+                    <span>
+                        <textarea name="network_user_note" cols="30" rows="5" placeholder="Write some notes here..."></textarea>
+                    </span>
+                        <button type="submit" class="tab-edit-button tab-save-button save-network" form="create-network-form"><ion-icon name="save"></ion-icon>Save Network</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="delete-network-wrap">
+            <div class="delete-network-popup">
+                <ion-icon name="alert-outline"></ion-icon>
+                <h2 class="delete-h2">This will <span>permanently delete</span> the selected network. Are you sure?</h2>
+                <button class="delete-yes">Yes</button>
+                <button class="delete-no">No</button>
+            </div>
+        </div>
+        <div class="networks-list-empty">
+            <h3>Network profiles list is empty, please create a network profile.</h3>
+        </div>
+    </main>
+  
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="js/networks-list-filter.js"></script>
+    <script src="js/responsive.js"></script>
+    <!-- MAP JS -->
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+    <script src="js/map.js"></script>
+    
+    <script>
+        // SIDEBAR DROPDOWN
+        $(".drop").on("click", function(e){
+            var target = $(e.currentTarget);
+            $(target).find(".side_drop").slideToggle();
+            $(".side_drop").not($(target).find(".side_drop")).slideUp();
+            $(".sidebar-container .drop_icon").not($(target).find(".drop_icon")).removeClass("rotate_icon");
+            $(target).find(".drop_icon").toggleClass("rotate_icon");
+
+            if($(target).closest(".main-sidebar").hasClass("collapsed-sidebar")){
+                $(".main-sidebar").removeClass("collapsed-sidebar");
+                $(".sidebar-title").show();
+                $(".sidebar-container nav ul .collapse-sidebar a ion-icon").toggleClass("rotate");
+            }
+        });
+    </script>
+
+    <script>
+        //COUNTRY FILTER
+        $(".country-wrapper a").on("click", function(){
+            $(".dropdown-content").removeClass("show");
+        });
+
+        $('.country-wrapper a').click(function() {
+            var ourClass = $(this).attr('class');
+            if(ourClass == 'all_countries') {
+                $('.networks-list').children('li').show();
+            }
+            else {
+                $('.networks-list').children('li:not(.' + ourClass + ')').hide();
+                $('.networks-list').children('li.' + ourClass).show();
+            }
+        });
+    </script>
+    <script>
+        //COLLAPSE SIDEBAR
+        $(".collapse-sidebar").on("click", function(){
+            $(".main-sidebar").toggleClass("collapsed-sidebar");
+            $(".sidebar-title").delay(50).toggle(0);
+            $(".main-container").toggleClass("collapsed-main");
+            $(".collapse-sidebar ion-icon").toggleClass("rotate");
+        });
+    </script>
+    <script>
+        //PROFILE DROPDOWN
+        $(".li-profile-img").on("click", function(){
+            $(".profile-dropdown").slideToggle(200);
+            $(".notification-dropdown").slideUp(200);
+        });
+    </script>
+    <script>
+        //CREATE NETWORK POPUP
+        $(".create_net_button").on("click", function(){
+            $(".create-network-popup").fadeIn();
+        });
+        $(".close-popup").on("click", function(){
+            $(".create-network-popup").fadeOut();
+            $("#create-network-form input, #create-network-form textarea, #create-network-form select").val(""); 
+        });
+    </script>
+    <script>
+        //DELETE NETWORK
+        $(".delete_net_button").on("click", function(){
+
+            $(".networks-list .trash-network").fadeToggle();
+            $(this).toggleClass("delete-pressed");
+
+                if($(".delete_net_button").hasClass("delete-pressed"))
+                {
+                    $(".delete_net_button a").contents().last().replaceWith("Finish Deleting");
+                }
+
+                else
+                {
+                    $(".delete_net_button a").contents().last().replaceWith("Delete Network");
+                }
+
+        });
+
+        $(document).on("click", ".trash-network", function(event) {
+
+            var target = $(event.currentTarget);
+            event.stopPropagation()
+
+                $(".delete-network-wrap").fadeIn("fast");
+
+                $(".delete-yes").unbind().on("click", function(){
+                    $(".delete-network-wrap").fadeOut("fast");
+
+                    $(target).parent().animate({
+                        opacity:0,
+                        marginRight:"-100%",
+                        marginLeft:"100%"
+                    },700, 'linear', function(){
+                    
+                        $(this).remove();
+                    
+                    });
+                });
+        });
+
+        $(".delete-no").on("click", function(){
+            $(".delete-network-wrap").fadeOut("fast");
+        });
+
+    </script>
+    <script>
+        //NOTIFICATION DROPDOWN
+        $(".header-right-icons ul li:first-child").on("click", function(){
+            $(".notification-dropdown").slideToggle(200);
+            $(".profile-dropdown").slideUp(200);
+        });
+    </script>
+    <script>
+        //CLICK OUTSIDE CLOSE DROPDOWN
+        $(".main-container").on("click", function(){
+            $(".notification-dropdown").slideUp(200);
+            $(".profile-dropdown").slideUp(200);
+        });
+    </script>
+    <script>
+        //SAVE NETWORK
+        $(".save-network").on("click", function(){
+
+            var network_name = $("input[name=name]").val();
+            var network_last_name = $("input[name=lastname]").val();
+
+            if(($("input[name=name]").val().length >0)){
+
+            var new_network_li = $("<li><div><img src='img/profile-pic.jpg'><span><p>" + network_name + " " + network_last_name + "</p><p></p></span></div><div><p></p></div><div><p><img class='flag-img' src=''></p></div><div><button><ion-icon name='list'='img'class='md hydrated' aria-label='list'></ion-icon>View Details</button></div><span class='trash-network'><ion-icon name='trash-bin'='img'='md hydrated' aria-label='trash bin'></ion-icon></span></li>").hide();
+
+            $(".networks-list li:last-child").after(new_network_li);
+            new_network_li.fadeIn(600);
+
+            $(".create-network-popup").fadeOut();
+
+            $("#create-network-form input, #create-network-form textarea, #create-network-form select").val(""); 
+
+            }
+        });
+    </script>
+      <script>
+        // SHOW MESSAGE WHEN NETWORK COMPANIES LIST EMPTY
+        $(document).on("click",".delete-yes" ,function(){
+
+            if($(".networks-list li").length < 2)
+
+             {
+                 $(".networks-list-empty").delay(800).fadeIn(200);
+                 $(".delete_net_button").removeClass("delete-pressed");
+                 $(".delete_net_button a").contents().last().replaceWith(" Edit Company");
+             }
+
+        });
+    </script>
+     
+    <script>
+        // MAP NUMBERS COUNTER
+            $('.countries-taken').each(function () {
+            $(this).prop('Counter',0).animate({
+                Counter: $(this).text()
+            }, {
+                duration: 1500,
+                easing: 'swing',
+                step: function (now) {
+                    $(this).text(Math.ceil(now));
+                }
+            });
+            });
+
+            $('.countries-taken-percent').each(function () {
+            $(this).prop('Counter',0).animate({
+                Counter: $(this).text()
+            }, {
+                duration: 1200,
+                easing: 'swing',
+                step: function (now) {
+                    $(this).text(Math.ceil(now) + "%");
+                }
+            });
+            });
+    </script>
+    <script>
+        // BOXES COUNTER
+        $(".cores-today, .cores-total, .contacts-total, .companies-total").each(function(){
+            $(this).prop("Counter", 0).animate({
+                Counter: $(this).text()
+            }, {
+                duration: 1500,
+                easing: "swing", 
+                step: function(now){
+                    $(this).text(Math.ceil(now));
+                }
+            });
+            });
+    </script>
+    <script>
+        // MAPS TABS
+        $(".chart-1").on("click", function(){
+             $(this).css({"background-color": "#ec5830", "border-color" : "#ec5830"});
+             $(".chart-2").css({"background-color": "#30c4ec", "border-color" : "#30c4ec"});
+             $("#chartdiv2").hide(0);
+             $("#chartdiv").show(0);
+             $(".stats-wrap").show(0);
+        });
+
+        $(".chart-2").on("click", function(){
+             $(this).css({"background-color": "#ec5830", "border-color" : "#ec5830"});
+             $(".chart-1").css({"background-color": "#30c4ec", "border-color" : "#30c4ec"});
+             $("#chartdiv").hide(0);
+             $("#chartdiv2").show(0);
+             $(".stats-wrap").hide(0);
+        });
+        if($("#chartdiv").is(":visible"))
+        {
+            $(".chart-1").css({"background-color": "#ec5830", "border-color" : "#ec5830"});
+        }
+    </script>
+    <script>
+        // CONTRACT EDIT CLICK HIDE DLT BTN
+        $("#edit_contract").on("click", function(){
+            $(".contract_delete").hide();
+        });
+
+        $(".save_contract_button").on("click", function(){
+            $(".contract_delete").show();
+        });
+    </script>
+    <style>
+        /* POPRAVCI 2.3. */
+        .main-sidebar{
+            z-index: 2;
+        }
+
+        @media (max-width: 1500px){
+            .profile-tabs::before {
+                left: 260px;
+            }
+        }
+
+        img:not(.header-profile-pic){
+         image-rendering:-webkit-optimize-contrast;
+        }
+
+        @media(max-width: 1000px){
+            .percent-wrap{
+                width: 100%;
+                text-align: center;
+                position: relative;
+                margin-bottom: -50px;
+            }
+            #chartdiv, #chartdiv2{
+                width: 100%;
+            }
+        }
+
+        @media(max-width: 600px){
+            .percent-wrap{
+                margin-bottom: -100px;
+            }
+        }
+
+        /*-------*/
+
+        @media(max-width: 960px){
+    .timeline-box:nth-child(even){
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .correspondence-box::after{
+        margin-left: 0;
+    }
+    .timeline-box:nth-child(odd){
+        float: left;
+        padding-left: 0;
+    }
+    .timeline-box{
+        width: 100%;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .timeline-box textarea{
+        max-width: 95%;
+    }
+    .timeline-box:nth-child(even) textarea{
+        margin-left: 0;
+    }
+    .timeline-box p:first-child, .timeline-box:nth-child(even) p:first-child{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .timeline-box:nth-child(even) ion-icon:nth-child(2), .timeline-box:nth-child(odd) ion-icon:nth-child(2){
+        margin-left: 15px;
+    }
+    .timeline-box p:nth-child(4){
+        text-align: left;
+    }
+    .timeline-box:nth-child(even) .timeline-img-wrap{
+        text-align: left;
+        margin-left: 0;
+        margin-right: auto;
+        padding-left: 15px;
+    }
+    .timeline-box:nth-child(odd) textarea{
+        margin-right: 0;
+    }
+    .timeline-box:nth-child(even) ion-icon[name="create"]{
+        left: auto;
+        right: 50px;
+    }
+    .timeline-box:nth-child(odd) ion-icon[name="create"], .timeline-box:nth-child(even) ion-icon[name="create"]{
+        top: 10px;
+        left: auto;
+        bottom: auto;
+        right: 35px;
+    }
+    .timeline-box:nth-child(odd) p:nth-child(4){
+        text-align: left;
+    }
+    .timeline-box:nth-child(odd) .timeline-img-wrap{
+        text-align: left;
+        margin-left: 0;
+        margin-right: auto;
+    }
+    .timeline-box:nth-child(odd) ion-icon[name="create"], .timeline-box:nth-child(even) ion-icon[name="create"]{
+        top: auto;
+        bottom: 70px;
+    }
+    .timeline-box p:first-child, .timeline-box:nth-child(even) p:first-child{
+        margin-left: 80px;
+    }
+}
+        /* POPRAVCI 2.3. */
+
+        /* POPRAVCI 3.3. */
+
+        #chartdiv, #chartdiv2{
+            cursor: zoom-in;
+        }
+
+        /* POPRAVCI 3.3. */
+    </style>
+    <script>
+        if($(".main-container").hasClass("collapsed-main")){
+            $(".profile-tabs::before").css("left", "15px");
+        }
+    </script>
+</body>
+</head>
+</html>

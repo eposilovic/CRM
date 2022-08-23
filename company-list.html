@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IDB CRM</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no;”" />
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/networks-list-style.css">
+    <link rel="stylesheet" href="style/panel-style.css">
+<body>
+    <aside class="main-sidebar">
+        <div class="sidebar-container">
+            <nav>
+                <ul>
+                    <li><a href="#_" title="Networks"><ion-icon name="globe-outline"></ion-icon><span class="sidebar-title">Networks</span></a></li>
+                    <li><a href="#_" title="My Work"><ion-icon name="briefcase-outline"></ion-icon><span class="sidebar-title">My Work</span></a></li>
+                    <li><a href="#_" title="My Meetings"><ion-icon name="calendar-outline"></ion-icon><span class="sidebar-title">My Meetings</span></a></li>
+                    <li><a href="#_" title="My Contacts"><ion-icon name="library-outline"></ion-icon><span class="sidebar-title">My Contacts</span></a></li>
+                    <li><a href="#_" title="Markets"><ion-icon name="storefront-outline"></ion-icon><span class="sidebar-title">Markets</span></a></li>
+                    <li><a href="#_" title="Organization"><ion-icon name="people-outline"></ion-icon><span class="sidebar-title">Organization</span></a></li>
+                    <li><a href="#_" title="My Profile"><ion-icon name="people-outline"></ion-icon><span class="sidebar-title">My Profile</span></a></li>
+                    <li class="collapse-sidebar"><a href="#_"><ion-icon name="play-skip-back-outline"></ion-icon></a></li>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+    <header class="main-header">
+        <div class="logo-container">
+            <a href="#_">
+                <img class="logo-img" src="img/logo.svg" alt="IDB CRM Logo">
+            </a>
+        </div>
+        <div class="header-right">
+            <div class="header-right-icons">
+                <ul>
+                   <li><a href="#_" title="Notifications"><ion-icon name="notifications-outline"></ion-icon></a></li>
+                   <li class="create-task-button"><a href="#_"><ion-icon name="add-outline"></ion-icon>Create Task</a></li>
+                   <li class="li-profile-img"><a href="#_">Ime Prezime <img class="header-profile-pic" src="img/profile-pic.jpg" alt=""></a>
+                        <div class="profile-dropdown">
+                            <a href="#_"><ion-icon name="person-outline"></ion-icon> My Profile</a> 
+                            <a href="#_"><ion-icon name="options-outline"></ion-icon> Panel</a>
+                            <a href="#_"><ion-icon name="settings-outline"></ion-icon> Settings</a>
+                            <a href="#_"><ion-icon name="exit-outline"></ion-icon> Logout</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <div class="main-container">
+
+                <ul id="breadcrumbs">
+                    <li><a href="#_">Dashboard</a></li>
+                    <li><a href="#_">Network Companies</a></li>
+                    <li><a href="#_">Breadcrumb Example</a></li>
+                    <li><a href="#_">Another Example</a></li>
+                </ul>
+
+            <h1>Network Companies <span class="networks-total">(5 total)</span></h1>
+            <button class="create_net_button"><a href="#"><ion-icon name="person-add"></ion-icon> Create Company</a></button>
+            <button class="delete_net_button"><a href="#"><ion-icon name="pencil"></ion-icon> Edit Company</a></button>
+            <div class="networks-search-wrap">
+                <form action="/action_page.php">
+                    <input class="networks-search" type="search" placeholder="Search Networks">
+                    <button class="networks-search-button" type="submit"><ion-icon name="search-outline"></ion-icon> </button>
+                </form>
+            </div>
+            <div>
+                <div class="country-filter">
+                    <select name="" id="filter-by-country">
+                        <option selected disabled hidden>Filter by country</option>
+                        <option value="All">All Countries</option>
+                        <option value="Algeria">Algeria</option>
+                        <option value="S_Arabia">Saudi Arabia</option>
+                        <option value="Pakistan">Pakistan</option>
+                        <option value="S_Africa">South Africa</option>
+                    </select>
+                </div>
+                <div class="top-country-filter">
+                    <input type="checkbox" id="top-country">
+                    <label for="top-country">Top Country</label>
+                </div>
+                <div class="manager-filter">
+                    <select name="" id="mk-manager-filter">
+                        <option value="Manager" selected disabled hidden>Marketing Manager</option>
+                        <option value="All">All</option>
+                        <option value="A_Marquinez">Adrian Marquinez</option>
+                        <option value="J_Bosch">Jaime Bosch</option>
+                        <option value="J_Espana">Jennifer Espana</option>
+                        <option value="J_Lozano">Juan Lozano</option>
+                        <option value="L_Joyera">Lidia Joyera</option>
+                        <option value="S_Czyzewski">Sebastian Czyzewski</option>
+                        <option value="V_Sos">Vanda Sos</option>
+                    </select>
+                </div>
+            </div>
+            <!--<div class="networks-filter">
+                <button onclick="myFunction()" class="dropbtn"><ion-icon name="earth-outline"></ion-icon>Countries <ion-icon name="chevron-down-outline"></ion-icon></button>
+                <div id="myDropdown" class="dropdown-content">
+                  <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+                    <div class="country-wrapper">
+                        <a href="#_" class="all_countries"><img class="flag-img" src="img/earth-outline.svg" alt=""> All Countries</a>
+                        <a href="#_" class="georgia"><img class="flag-img" src="img/flags/georgia_flag.png" alt=""> Georgia</a>
+                        <a href="#_" class="greece"><img class="flag-img" src="img/flags/greece_flag.png" alt=""> Greece</a>
+                        <a href="#_" class="indonesia"><img class="flag-img" src="img/flags/indonesia_flag.png" alt=""> Indonesia</a>
+                        <a href="#_" class="ivorycoast"><img class="flag-img" src="img/flags/ivorycoast_flag.png" alt=""> Ivory Coast</a>
+                        <a href="#_" class="katar"><img class="flag-img" src="img/flags/katar_flag.png" alt=""> Katar</a>
+                        <a href="#_" class="oman"><img class="flag-img" src="img/flags/oman_flag.png" alt=""> Oman</a>
+                        <a href="#_" class="pakistan"><img class="flag-img" src="img/flags/pakistan_flag.png" alt=""> Pakistan</a>
+                        <a href="#_" class="saudiarabia"><img class="flag-img" src="img/flags/saudiarabia_flag.png" alt=""> Saudi Arabia</a>
+                    </div>
+                </div>
+            </div>-->
+            <div class="networks-list-wrapper">
+                <ul class="networks-list">
+                    <li class="S_Africa top-country-li">
+                        <!-- <ion-icon name="star" class="top-country"></ion-icon> -->
+                        <div>
+                            <img src="img/company-logo.jpg" alt="">
+                                <span>
+                                    <p>Wayne Corporation</p>
+                                    <p>wayne_corp@batman.com</p>
+                                </span>
+                        </div>
+                        <div>
+                            <ion-icon name="checkmark-circle" class="fraud-yes"></ion-icon>
+                            <!-- <ion-icon name="close-circle" class="fraud-no"></ion-icon> -->
+                        </div>
+                        <div>
+                            <p class="status-live">Live</p>
+                        </div>
+                        <!-- <div>
+                            <ul class="nego-steps">
+                                <li class="step-check"><ion-icon name="chatbubbles"></ion-icon> Initial talk</li>
+                                <li class="step-check"><ion-icon name="cash"></ion-icon> Finance</li>
+                                <li><ion-icon name="document-text"></ion-icon> Signing the contract</li>
+                                <li><ion-icon name="checkmark-done"></ion-icon> Integration</li>
+                            </ul>
+                        </div> -->
+                        <div>
+                            <!-- <button><ion-icon name="list"></ion-icon>View Network Profiles</button> -->
+                            <p title="Marketing Manager"><ion-icon name="megaphone-outline" class="mark-mng-icon"></ion-icon> Juan Lozano</p>
+                        </div>
+
+                        <a href="#_" title="Edit Company" class="edit-company-btn">
+                            <ion-icon name="create"></ion-icon>
+                        </a>
+                        <span class="trash-network">
+                            <a href="#_" title="Delete Company">
+                                <ion-icon name="trash-bin"></ion-icon>
+                            </a>
+                        </span>
+                        <div>
+                            <ion-icon name="chevron-down" class="expand-company md hydrated" role="img" aria-label="chevron down"></ion-icon>
+                        </div>
+                    </li>
+                    <li class="Pakistan">
+                        <div>
+                            <img src="img/company-logo.jpg" alt="">
+                                <span>
+                                    <p>Another Wayne Corporation</p>
+                                    <p>wayne_corp@batman.com</p>
+                                </span>
+                        </div>
+                        <div>
+                            <!-- <ion-icon name="checkmark-circle" class="fraud-yes"></ion-icon> -->
+                            <ion-icon name="close-circle" class="fraud-no"></ion-icon>
+                        </div>
+                        <div>
+                            <p class="status-rejected">Rejected</p>
+                        </div>
+                        <!-- <div>
+                            <ul class="nego-steps">
+                                <li class="step-check"><ion-icon name="chatbubbles"></ion-icon> Initial talk</li>
+                                <li class="step-check"><ion-icon name="cash"></ion-icon> Finance</li>
+                                <li class="step-check"><ion-icon name="document-text"></ion-icon> Signing the contract</li>
+                                <li><ion-icon name="checkmark-done"></ion-icon> Integration</li>
+                            </ul>
+                        </div> -->
+                        <div>
+                            <!-- <button><ion-icon name="list"></ion-icon>View Network Profiles</button> -->
+                            <p title="Marketing Manager"><ion-icon name="megaphone-outline" class="mark-mng-icon"></ion-icon> Jennifer Espana</p>
+                        </div>
+
+                        <a href="#_" title="Edit Company" class="edit-company-btn">
+                            <ion-icon name="create"></ion-icon>
+                        </a>
+                        <span class="trash-network">
+                            <a href="#_" title="Delete Company">
+                                <ion-icon name="trash-bin"></ion-icon>
+                            </a>
+                        </span>
+                        <div>
+                            <ion-icon name="chevron-down" class="expand-company md hydrated" role="img" aria-label="chevron down"></ion-icon>
+                        </div>
+                    </li>
+                    <li class="S_Arabia">
+                        <div>
+                            <img src="img/company-logo.jpg" alt="">
+                                <span>
+                                    <p>And Another Wayne Corporation</p>
+                                    <p>wayne_corp@batman.com</p>
+                                </span>
+                        </div>
+                        <div>
+                            <!-- <ion-icon name="checkmark-circle" class="fraud-yes"></ion-icon> -->
+                            <ion-icon name="close-circle" class="fraud-no"></ion-icon>
+                        </div>
+                        <div>
+                            <p class="status-rejected">Rejected</p>
+                        </div>
+                        <!-- <div>
+                            <ul class="nego-steps">
+                                <li class="step-check"><ion-icon name="chatbubbles"></ion-icon> Initial talk</li>
+                                <li><ion-icon name="cash"></ion-icon> Finance</li>
+                                <li><ion-icon name="document-text"></ion-icon> Signing the contract</li>
+                                <li><ion-icon name="checkmark-done"></ion-icon> Integration</li>
+                            </ul>
+                        </div> -->
+                        <div>
+                            <!-- <button><ion-icon name="list"></ion-icon>View Network Profiles</button> -->
+                            <p title="Marketing Manager"><ion-icon name="megaphone-outline" class="mark-mng-icon"></ion-icon> Jaime Bosch</p>
+                        </div>
+                        
+                        <a href="#_" title="Edit Company" class="edit-company-btn">
+                            <ion-icon name="create"></ion-icon>
+                        </a>
+                        <span class="trash-network">
+                            <a href="#_" title="Delete Company">
+                                <ion-icon name="trash-bin"></ion-icon>
+                            </a>
+                        </span>
+                        <div>
+                            <ion-icon name="chevron-down" class="expand-company md hydrated" role="img" aria-label="chevron down"></ion-icon>
+                        </div>
+                        <div class="add-info">
+                            <div>
+                                <p><b>AM:</b> <span>Paula / paula@armorands.com</span></p>
+                                <p><b>Top Markets:</b> <span>MY, ZA, MX, PK</span></p>
+                                <p><b>Top Verticals:</b> <span>Games & Downloads</span></p>
+                                <p><b>Blacklisted in markets:</b> <span>X, Z, Y</span></p>
+                            </div>
+                            <div>
+                                <p><b>Last offer sent:</b> <span>XX/XX/20XX</span></p>
+                                <p><b>Offers/markets tried:
+                                    <ul>
+                                        <li>One Offer</li>
+                                        <li>Two Offer</li>
+                                    </ul>
+                                </b></p>
+                            </div>
+                            <div>
+                                <ul class="nego-steps">
+                                    <li class="step-check"><ion-icon name="chatbubbles"></ion-icon> Initial Conversations</li>
+                                    <li class="step-check"><ion-icon name="document-attach"></ion-icon> Waiting Docs</li>
+                                    <li><ion-icon name="document-text"></ion-icon> Insertion Order</li>
+                                    <li><ion-icon name="checkmark-done"></ion-icon> Integration</li>
+                                    <li><ion-icon name="checkmark-done"></ion-icon> Working Offers</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <textarea name="network_company_note" cols="30" rows="5" placeholder="Write some notes here..." value="">Short note about network company. Maybe not so short, but shorter.</textarea>
+                            </div>
+                            <div>
+                                <button><ion-icon name="list"></ion-icon>View Network Profiles</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="Algeria top-country-li">
+                        <!-- <ion-icon name="star" class="top-country md hydrated" role="img" aria-label="star"></ion-icon> -->
+                        <div>
+                            <img src="img/company-logo.jpg" alt="">
+                                <span>
+                                    <p>Batman Corporation</p>
+                                    <p>wayne_corp@batman.com</p>
+                                </span>
+                        </div>
+                        <div>
+                            <ion-icon name="checkmark-circle" class="fraud-yes"></ion-icon>
+                            <!-- <ion-icon name="close-circle" class="fraud-no"></ion-icon> -->
+                        </div>
+                        <div>
+                            <p class="status-inactive">Inactive</p>
+                        </div>
+                        
+                        <div>
+                            <p title="Marketing Manager"><ion-icon name="megaphone-outline" class="mark-mng-icon"></ion-icon> Adrian Marquinez</p>
+                        </div>
+                        <div>
+                            <ion-icon name="chevron-down" class="expand-company md hydrated" role="img" aria-label="chevron down"></ion-icon>
+                        </div>
+                        <a href="#_" title="Edit Company" class="edit-company-btn">
+                            <ion-icon name="create"></ion-icon>
+                        </a>
+                        <span class="trash-network">
+                            <a href="#_" title="Delete Company">
+                                <ion-icon name="trash-bin"></ion-icon>
+                            </a>
+                        </span>
+                        <div class="add-info">
+                            <div>
+                                <p><b>AM:</b> <span>Paula / paula@armorands.com</span></p>
+                                <p><b>Top Markets:</b> <span>MY, ZA, MX, PK</span></p>
+                                <p><b>Top Verticals:</b> <span>Games & Downloads</span></p>
+                                <p><b>Blacklisted in markets:</b> <span>X, Z, Y</span></p>
+                            </div>
+                            <div>
+                                <p><b>Last offer sent:</b> <span>XX/XX/20XX</span></p>
+                                <p><b>Offers/markets tried:
+                                    <ul>
+                                        <li>One Offer</li>
+                                        <li>Two Offer</li>
+                                    </ul>
+                                </b></p>
+                            </div>
+                            <div>
+                                <ul class="nego-steps">
+                                    <li class="step-check"><ion-icon name="chatbubbles"></ion-icon> Initial Conversations</li>
+                                    <li class="step-check"><ion-icon name="document"></ion-icon> Waiting Docs</li>
+                                    <li><ion-icon name="document-text"></ion-icon> Insertion Order</li>
+                                    <li><ion-icon name="checkmark-done"></ion-icon> Integration</li>
+                                    <li><ion-icon name="receipt"></ion-icon> Working Offers</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <textarea name="network_company_note" cols="30" rows="5" placeholder="Write some notes here..." value="">Short note about network company. Maybe not so short, but shorter.</textarea>
+                            </div>
+                            <div>
+                                <button class="offer-info-btn"><ion-icon name="add-circle-outline"></ion-icon> Add Info</button>
+                            </div>
+                            <div>
+                                <button><ion-icon name="list"></ion-icon>View Network Profiles</button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <footer><hr>Copyright © 2021 <b>IDB Mobile Technology</b></footer>
+        </div>
+        <div class="create-network-popup">
+            <div class="popup-wrap">
+                <ion-icon name="close" class="close-popup"></ion-icon>
+                <h2>Create Company</h2>
+                <form action="/action_page.php" id="create-company-form">
+                    <span>
+                        <label>Company Name</label>
+                        <input type="text" name="company_name" placeholder="Company Name" required>
+                    </span>
+                    <span>
+                        <label>Phone</label>
+                        <input type="tel" name="phone_number" placeholder="Phone">
+                    </span>
+                    <span>
+                        <label>Email</label>
+                        <input type="email" name="email" placeholder="Email" required>
+                    </span>
+                    <span>
+                        <label>Website</label>
+                        <input type="text" name="website_url" placeholder="Website">
+                    </span>
+                    <span>
+                        <label>Type</label>
+                        <select name="type">
+                            <option value="DSP" name="DSP">DSP</option>
+                            <option value="Affiliate" name="AFFILIATE">Affiliate</option>
+                        </select>
+                    </span>
+                    <span>
+                        <label>Number of Employees</label>
+                        <input type="number" name="employee_number" placeholder="10">
+                    </span>
+                    <span>
+                        <label>Revenue</label>
+                        <input type="number" name="revenue" placeholder="10">
+                    </span>
+                    <span>
+                        <label>Year Founded</label>
+                        <input type="number" name="year_founded" placeholder="1946">
+                    </span>
+                    <span>
+                        <label>Job description</label>
+                        <input type="text" name="job_description" placeholder="Job Description">
+                    </span>
+                    <span>
+                        <label>Core Business</label>
+                        <input type="text" name="core_business" placeholder="Core Business">
+                    </span>
+                    <span>
+                        <label>Company Owner First Name</label>
+                        <input type="text" name="company_owner_name" placeholder="Company Owner First Name">
+                    </span>
+                    <span>
+                        <label>Company Owner Last name</label>
+                        <input type="text" name="company_owner_lastname" placeholder="Company Owner Last Name">
+                    </span>
+                    <span>
+                        <label>Top Competitors</label>
+                        <input type="text" name="company_owner_lastname" placeholder="Company Owner Last Name">
+                    </span>
+                    <span>
+                        <label>Account Manager First Name</label>
+                        <input type="text" name="account_manager_name" placeholder="Account Manager First Name">
+                    </span>
+                    <span>
+                        <label>Account Manager Last Name</label>
+                        <input type="text" name="account_manager_lname" placeholder="Account Manager Last Name">
+                    </span>
+                    <span>
+                        <label>Account Manager Email</label>
+                        <input type="email" name="account_manager_email" placeholder="Account Manager Email">
+                    </span>
+                    <span>
+                        <label>Top Markets</label>
+                        <input type="email" list="filter-by-top-market" placeholder="Filter by Market" multiple class="top-mark-input">
+                        <datalist name="" id="filter-by-top-market">
+                            <option value="Saudi_Arabia"></option>
+                            <option value="Pakistan"></option>
+                            <option value="Canada"></option>
+                            <option value="Iran"></option>
+                            <option value="Qatar"></option>
+                        </datalist>
+                    </span>
+                    <span>
+                        <label>Top Verticals</label>
+                        <input type="text" name="top_verticals" placeholder="Top Verticals">
+                    </span>
+                    <span>
+                        <label>Blacklisted in:</label>
+                        <input type="email" list="blacklist-filter-by-market" placeholder="Filter by Market" multiple class="blacklist-input">
+                        <datalist name="" id="blacklist-filter-by-market">
+                            <option value="Saudi_Arabia"></option>
+                            <option value="Pakistan"></option>
+                            <option value="Canada"></option>
+                            <option value="Iran"></option>
+                            <option value="Qatar"></option>
+                        </datalist>
+                    </span>
+                    <span>
+                        <textarea name="network_company_note" cols="30" rows="5" placeholder="Write some notes here..."></textarea>
+                    </span>
+                        <button type="submit" class="tab-edit-button tab-save-button save-company" form="create-company-form"><ion-icon name="save"></ion-icon> Save Company</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="edit-network-popup">
+            <div class="popup-wrap">
+                <ion-icon name="close" class="close-popup"></ion-icon>
+                <h2>Edit Company</h2>
+                <form action="/action_page.php" id="edit-company-form">
+                    <span>
+                        <label>Company Name</label>
+                        <input type="text" name="company_name" placeholder="Company Name" required>
+                    </span>
+                    <span>
+                        <label>Phone</label>
+                        <input type="tel" name="phone_number" placeholder="Phone">
+                    </span>
+                    <span>
+                        <label>Email</label>
+                        <input type="email" name="email" placeholder="Email" required>
+                    </span>
+                    <span>
+                        <label>Website</label>
+                        <input type="text" name="website_url" placeholder="Website">
+                    </span>
+                    <span>
+                        <label>Type</label>
+                        <select name="type">
+                            <option value="DSP" name="DSP">DSP</option>
+                            <option value="Affiliate" name="AFFILIATE">Affiliate</option>
+                        </select>
+                    </span>
+                    <span>
+                        <label>Number of Employees</label>
+                        <input type="number" name="employee_number" placeholder="10">
+                    </span>
+                    <span>
+                        <label>Revenue</label>
+                        <input type="number" name="revenue" placeholder="10">
+                    </span>
+                    <span>
+                        <label>Year Founded</label>
+                        <input type="number" name="year_founded" placeholder="1946">
+                    </span>
+                    <span>
+                        <label>Job description</label>
+                        <input type="text" name="job_description" placeholder="Job Description">
+                    </span>
+                    <span>
+                        <label>Core Business</label>
+                        <input type="text" name="core_business" placeholder="Core Business">
+                    </span>
+                    <span>
+                        <label>Company Owner First Name</label>
+                        <input type="text" name="company_owner_name" placeholder="Company Owner First Name">
+                    </span>
+                    <span>
+                        <label>Company Owner Last name</label>
+                        <input type="text" name="company_owner_lastname" placeholder="Company Owner Last Name">
+                    </span>
+                    <span>
+                        <label>Top Competitors</label>
+                        <input type="text" name="company_owner_lastname" placeholder="Company Owner Last Name">
+                    </span>
+                    <span>
+                        <label>Account Manager First Name</label>
+                        <input type="text" name="account_manager" placeholder="Account Manager info">
+                    </span>
+                    <span>
+                        <label>Account Manager Last Name</label>
+                        <input type="text" name="account_manager" placeholder="Account Manager info">
+                    </span>
+                    <span>
+                        <label>Account Manager Email</label>
+                        <input type="email" name="account_manager" placeholder="Account Manager info">
+                    </span>
+                    <span>
+                        <label>Top Markets</label>
+                        <input type="text" name="top_markets" placeholder="Top Markets">
+                    </span>
+                    <span>
+                        <label>Top Verticals</label>
+                        <input type="text" name="top_verticals" placeholder="Top Verticals">
+                    </span>
+                    <span>
+                        <label>Blacklisted in:</label>
+                        <input type="text" name="blacklisted" placeholder="Blacklisted in markets">
+                    </span>
+                    <span>
+                        <textarea name="network_company_note" cols="30" rows="5" placeholder="Write some notes here..."></textarea>
+                    </span>
+                        <button type="submit" class="tab-edit-button tab-save-button save-company" form="edit-company-form"><ion-icon name="save"></ion-icon> Save Company</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="offer-info-popup">
+            <div class="popup-wrap">
+                <ion-icon name="close" class="close-popup"></ion-icon>
+                <h2>Create Offer Info</h2>
+                <form action="/action_page.php" id="create-offer-form">
+                    <span>
+                        <label>Last offer sent</label>
+                        <input type="datetime-local" name="" required>
+                    </span>
+                    <span>
+                        <label>Offers/markets tried:</label>
+                        <input type="text">
+                    </span>
+                    <span>
+                        <fieldset>
+                            <legend>Integration Steps</legend>
+                            <div>
+                            <label for="IC"><ion-icon name="chatbubbles-outline"></ion-icon> Initial Conversations</label>
+                            <input type="checkbox" name="I.C." id="IC" >
+                            </div>
+                            <div>
+                            <label for="WD"><ion-icon name="document-outline"></ion-icon> Waiting Docs</label>
+                            <input type="checkbox" name="W.D" id="WD" disabled>
+                            </div>
+                            <div>
+                            <label for="IO"><ion-icon name="document-text-outline"></ion-icon> Insertion Order</label>
+                            <input type="checkbox" name="I.O." id="IO" disabled>
+                            </div>
+                            <div>
+                            <label for="INT"><ion-icon name="checkmark-done-outline"></ion-icon> Integration</label>
+                            <input type="checkbox" name="INT" id="INT" disabled>
+                            </div>
+                            <div>
+                            <label for="WO"><ion-icon name="receipt-outline"></ion-icon> Working Offers</label>
+                            <input type="checkbox" name="W.O." id="WO" disabled>
+                            </div>
+                        </fieldset>
+                    </span>
+                        <button type="submit" class="tab-edit-button tab-save-button save-company" form="create-company-form"><ion-icon name="save"></ion-icon> Save Company</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="delete-network-wrap">
+            <div class="delete-network-popup">
+                <ion-icon name="alert-outline"></ion-icon>
+                <h2 class="delete-h2">This will <span>permanently delete</span> the selected company. Are you sure?</h2>
+                <button class="delete-yes">Yes</button>
+                <button class="delete-no">No</button>
+            </div>
+        </div>
+        
+        <div class="companies-list-empty">
+            <h3>Network companies list is empty, please create a company.</h3>
+        </div>
+    </main>
+  
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="js/networks-list-filter.js"></script>
+    <script src="js/responsive.js"></script>
+    <script src="js/company-save.js"></script>
+
+    <script>
+        //COUNTRY FILTER
+        $(".country-wrapper a").on("click", function(){
+            $(".dropdown-content").removeClass("show");
+        });
+
+        $('.country-wrapper a').click(function() {
+            var ourClass = $(this).attr('class');
+            if(ourClass == 'all_countries') {
+                $('.networks-list').children('li').show();
+            }
+            else {
+                $('.networks-list').children('li:not(.' + ourClass + ')').hide();
+                $('.networks-list').children('li.' + ourClass).show();
+            }
+        });
+    </script>
+    <script>
+        //COLLAPSE SIDEBAR
+        $(".collapse-sidebar").on("click", function(){
+            $(".main-sidebar").toggleClass("collapsed-sidebar");
+            $(".sidebar-title").delay(50).toggle(0);
+            $(".main-container").toggleClass("collapsed-main");
+            $(".collapse-sidebar ion-icon").toggleClass("rotate");
+        });
+    </script>
+    <script>
+        //PROFILE DROPDOWN
+        $(".li-profile-img").on("click", function(){
+            $(".profile-dropdown").slideToggle(200);
+        });
+    </script>
+    <script>
+        //CREATE NETWORK POPUP
+        $(".create_net_button").on("click", function(){
+            $(".create-network-popup").fadeIn();
+        });
+        $(".close-popup").on("click", function(){
+            $(".create-network-popup").fadeOut();
+            $(".edit-network-popup").fadeOut();
+            $(".offer-info-popup").fadeOut();
+            $("#create-company-form input, #create-company-form textarea, #create-company-form select").val(""); 
+        });
+    </script>
+    <script>
+        //DELETE NETWORK
+        $(".delete_net_button").on("click", function(){
+
+            $(".networks-list .trash-network").fadeToggle();
+            $(".networks-list .edit-company-btn").fadeToggle();
+            $(this).toggleClass("delete-pressed");
+
+                if($(".delete_net_button").hasClass("delete-pressed"))
+                {
+                    $(".delete_net_button a").contents().last().replaceWith(" Finish Editing");
+                }
+
+                else
+                {
+                    $(".delete_net_button a").contents().last().replaceWith(" Edit Company");
+                }
+
+        });
+
+        $(document).on("click", ".trash-network", function(event) {
+
+            var target = $(event.currentTarget);
+            event.stopPropagation()
+
+                $(".delete-network-wrap").fadeIn("fast");
+
+                $(".delete-yes").unbind().on("click", function(){
+                    $(".delete-network-wrap").fadeOut("fast");
+
+                    $(target).parent().animate({
+                        opacity:0,
+                        marginRight:"-100%",
+                        marginLeft:"100%"
+                    },700, 'linear', function(){
+                    
+                        $(this).remove();
+                    
+                    });
+                });
+        });
+
+        $(".delete-no").on("click", function(){
+            $(".delete-network-wrap").fadeOut("fast");
+        });
+
+        $(".edit-company-btn").on("click", function(){
+            $(".edit-network-popup").fadeIn();
+        });
+
+    </script>
+    <script>
+        //CLICK OUTSIDE CLOSE DROPDOWN
+        $(".main-container").on("click", function(){
+            $(".notification-dropdown").slideUp(200);
+            $(".profile-dropdown").slideUp(200);
+        });
+    </script>
+    <script>
+        // SHOW MESSAGE WHEN NETWORK COMPANIES LIST EMPTY
+        $(document).on("click",".delete-yes" ,function(){
+
+            if($(".networks-list li").length < 2)
+
+             {
+                 $(".companies-list-empty").delay(800).fadeIn(200);
+                 $(".delete_net_button").removeClass("delete-pressed");
+                 $(".delete_net_button a").contents().last().replaceWith(" Edit Company");
+             }
+
+        });
+    </script>
+       <script>
+        //COUNTRY FILTER
+            $('#filter-by-country').change(function(){
+                $this = $(this);
+                $('.networks-list li').hide();
+                $('.'+$this.val()).show();
+
+                if($this.val() == "All"){
+                    $('.networks-list li').show();
+                }
+            });
+    </script>
+
+    <script>
+        // -----------FOLIJE R1 REQUIRED TEST-----------
+        // $("input[name='r1']").on("click", function(){
+        //     if($(".r1-checkbox input").is(":checked")){
+        //         $("input[name='legal_entity'], input[name='legal_entity_oib']").attr("required", true);
+        //     }
+        //     else{
+        //         $("input[name='legal_entity'], input[name='legal_entity_oib']").attr("required", false);
+        //     }
+        // });
+    </script>
+    
+    <script>
+        // TOP COUNTRY FILTER
+            $('#top-country').change(function(){
+                $(".networks-list li").toggle();
+                if($(".networks-list li").hasClass("top-country-li")){
+                    $(".top-country-li").show();
+                }
+            });
+    </script>
+
+    <script>
+        // NETWORK COMPANIES SLIDE ACCORDION
+        $(".expand-company").on("click", function(){
+            $(this).closest("li").find(".add-info").toggleClass("add-info-border");
+            $(this).closest("li").siblings().find(".add-info>div").slideUp();
+            $(this).parent().parent().find(".add-info").children().slideToggle();
+            $(this).closest("li").siblings().find(".expand-company").removeClass("icon-rotate");
+            $(this).closest("li").siblings().find(".add-info").removeClass("add-info-border");
+            $(this).toggleClass("icon-rotate");
+        });
+    </script>
+
+<script>
+    //MARKETING MANAGER FILTER
+        $('#mk-manager-filter').change(function(){
+            $this = $("#mk-manager-filter :selected").text();
+
+            $('.networks-list li').hide();
+            $("p[title='Marketing Manager']:contains('"+$this+"')").closest("li").show(); 
+
+            if($this == "All"){
+                $('.networks-list li').show();
+            }
+        });
+</script>
+
+<script>
+    // CHANGE DATALIST INPUT TYPE ON FOCUSOUT
+    $(".top-mark-input, .blacklist-input").focusin ( function() { $(this).attr("type","email"); });    
+    $(".top-mark-input, .blacklist-input").focusout( function() { $(this).attr("type","text"); });
+</script>
+
+<script>
+    // ADD OFFER INFO POPUP
+    $(".offer-info-btn").on("click", function(){
+        $(".offer-info-popup").fadeIn();
+    });
+</script>
+<script>
+    // INTEGRATION STEPS CHECKBOX ORDER
+    $(function() {
+        $('input[type=checkbox]').bind("click", function() {
+            $(this).parent().next().find(':checkbox').removeAttr("disabled", this.checked);
+            $(this).parent().prev().find(':checkbox').removeAttr("disabled", !this.checked);
+            $(this).parent().next().find(':checkbox').attr("disabled", !this.checked);
+        });
+    });
+</script>
+</body>
+</head>
+</html>

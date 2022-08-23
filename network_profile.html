@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IDB CRM Network Profile</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no;”" />
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/networks-list-style.css">
+    <link rel="stylesheet" href="style/network-profile-style.css">
+    <link rel="stylesheet" href="style/timeline.css">
+<body>
+    <aside class="main-sidebar">
+        <div class="sidebar-container">
+            <nav>
+                <ul>
+                    <li><a href="#_" title="Networks"><ion-icon name="globe-outline"></ion-icon><span class="sidebar-title">Networks</span></a></li>
+                    <li><a href="#_" title="My Work"><ion-icon name="briefcase-outline"></ion-icon><span class="sidebar-title">My Work</span></a></li>
+                    <li><a href="#_" title="My Meetings"><ion-icon name="calendar-outline"></ion-icon><span class="sidebar-title">My Meetings</span></a></li>
+                    <li><a href="#_" title="My Contacts"><ion-icon name="library-outline"></ion-icon><span class="sidebar-title">My Contacts</span></a></li>
+                    <li><a href="#_" title="Markets"><ion-icon name="storefront-outline"></ion-icon><span class="sidebar-title">Markets</span></a></li>
+                    <li><a href="#_" title="Organization"><ion-icon name="people-outline"></ion-icon><span class="sidebar-title">Organization</span></a></li>
+                    <li><a href="#_" title="My Profile"><ion-icon name="people-outline"></ion-icon><span class="sidebar-title">My Profile</span></a></li>
+                    <li class="collapse-sidebar"><a href="#_"><ion-icon name="play-skip-back-outline"></ion-icon></a></li>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+    <header class="main-header">
+        <div class="logo-container">
+            <a href="#_">
+                <img class="logo-img" src="img/logo.svg" alt="IDB CRM Logo">
+            </a>
+        </div>
+        <div class="header-right">
+            <div class="header-right-icons">
+                <ul>
+                   <li><a href="#_" title="Notifications"><ion-icon name="notifications-outline"></ion-icon></a></li>
+                   <li class="create-task-button"><a href="#_"><ion-icon name="add-outline"></ion-icon>Create Task</a></li>
+                   <li class="li-profile-img"><a href="#_">Ime Prezime <img class="header-profile-pic" src="img/profile-pic.jpg" alt=""></a>
+                        <div class="profile-dropdown">
+                            <a href="#_"><ion-icon name="person-outline"></ion-icon> My Profile</a> 
+                            <a href="#_"><ion-icon name="options-outline"></ion-icon> Panel</a>
+                            <a href="#_"><ion-icon name="settings-outline"></ion-icon> Settings</a>
+                            <a href="#_"><ion-icon name="exit-outline"></ion-icon> Logout</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <div class="main-container">
+            <div class="profile-wrapper">
+                <img class="profile-img" src="img/user-1.jpg" alt="">
+                <h1 class="profile-name">Marley Navarro</h1>
+                <span class="profile-title">IT Batman</span>
+                <span class="profile-country"><ion-icon name="earth-outline"></ion-icon>Georgia</span>
+                <span class="profile-mail"><ion-icon name="mail-outline"></ion-icon><a href="mailto:marleynavarro@gmail.com">marleynavarro@gmail.com</a></span>
+                <span class="profile-phone"><ion-icon name="call-outline"></ion-icon><a href="tel:+49-69-20570-001">+49-69-20570-001</a></span>
+                <button class="profile-edit"><ion-icon name="create-outline"></ion-icon>Edit profile</button>
+            </div> 
+            <div class="tabs-container">   
+                <div class="profile-tabs">
+                    <button id="tablinks1" class="tablinks tab-bg"><ion-icon name="person-circle"></ion-icon>Profile</button>
+                    <button id="tablinks2" class="tablinks"><ion-icon name="person-add"></ion-icon>Contacts</button>
+                    <button id="tablinks3" class="tablinks"><ion-icon name="business"></ion-icon>Company</button>
+                    <button id="tablinks4" class="tablinks"><ion-icon name="document-text"></ion-icon>Contract</button>
+                    <button id="tablinks5" class="tablinks"><ion-icon name="pricetag"></ion-icon>Offers</button>
+                    <button id="tablinks6" class="tablinks"><ion-icon name="people-circle"></ion-icon>Partners</button>
+                    <button id="tablinks7" class="tablinks"><ion-icon name="information-circle"></ion-icon>Country Network Core Info</button>
+                    <button id="tablinks8" class="tablinks"><ion-icon name="chatbubbles"></ion-icon>Correspondence</button>
+                </div>
+                <div id="tab1" class="tab-content">
+                    <button class="tab-edit-button"><ion-icon name="pencil-outline"></ion-icon>Edit</button>
+                    <div class="tab-content-wrapper">
+                        <h2>Basic Information</h2>
+                        <h4>Name</h4>
+                        <p>Marley Navarro</p>
+                        <h4>Date of birth</h4>
+                        <p>April 17, 1915</p>
+                        <h4>Education</h4>
+                        <p>Master of Karate</p>
+                        <h4>College Degree</h4>
+                        <p>Ninja phd</p>
+                        <h4>Gender</h4>
+                        <p>Male</p>
+                    </div>
+                    <div class="tab-content-wrapper">
+                        <h2>Personal Information</h2>
+                        <h4>Hobby</h4>
+                        <p>Fighting Crime</p>
+                        <h4>Relationship status</h4>
+                        <p>Forever single</p>
+                        <h4>Family members</h4>
+                        <p>1</p>
+                        <h4>Children</h4>
+                        <p>No</p>
+                        <h4>Pets</h4>
+                        <p>BatDog</p>
+                    </div>
+                    <div class="tab-content-wrapper">
+                        <h2>Notes</h2>
+                        <textarea name="" id="" cols="30" rows="5" placeholder="These are some notes about Batman. There is not much to say except that he is indeed, Batman." readonly></textarea>
+                    </div>
+                </div>
+                <div id="tab2" class="tab-content">
+
+                    <button class="contract_delete"><a href="#_"><ion-icon name="trash-outline"></ion-icon> Delete Contract</a></button>
+
+                    <button class="contact_update contact_create" name="contact_update" data-atrr="">
+                        <ion-icon name="pencil-outline"></ion-icon> Add new
+                    </button> 
+
+                   
+
+                   
+                    <div class="tab-content-wrapper">
+                        <h2>Network contacts</h2>
+                        <h4>Phone</h4>
+                        <p><a href="tel:+49-69-20570-001">+49-69-20570-001</a></p>
+                        <h4>Phone</h4>
+                        <p><a href="tel:+49-69-20570-001">+49-69-20570-001</a></p>
+                        <h4>Email</h4>
+                        <p><a href="mailto:marleynavarro@gmail.com">marleynavarro@gmail.com</a></p>
+                        <h4>Email</h4>
+                        <p><a href="mailto:marleynavarro@gmail.com">marleynavarro@gmail.com</a></p>
+                    </div>
+                    <div class="tab-content-wrapper">
+                        <h2>Network information</h2>
+                        <h4>Social networks</h4>
+                        <p><a href="#_">facebook.com/MarleyNavarro</a></p>
+                        <p><a href="#_">instagram.com/MarleyNavarro</a></p>
+                        <h4>Contact Source</h4>
+                        <p>Linkedin</p>
+                        <h4>Research Tools</h4>
+                        <p>Google Trends</p>
+                    </div>
+                    <div class="tab-content-wrapper">
+                        <h2>Network location</h2>
+                        <h4>Address</h4>
+                        <p>31 Chikovani St, 0162 Tbilisi</p>
+                        <h4>Country code</h4>
+                        <p>+995</p>
+                        <h4>ISO Code</h4>
+                        <p>GEO</p>
+                    </div>
+                    <span class="contract_delete_icon">
+                        <a href="#_" title="Delete Contract"><ion-icon name="trash-bin"></ion-icon></a>
+                    </span>
+                </div>
+                <div id="tab3" class="tab-content">
+                    <button class="tab-edit-button"><ion-icon name="pencil-outline"></ion-icon>Edit</button>
+                    <div class="tab-content-wrapper">
+                        <h2>Company contact</h2>
+                        <h4>Company Name</h4>
+                        <p>Batman inc.</p>
+                        <h4>Phone</h4>
+                        <p><a href="tel:+496920570001">+49-69-20570-001</a></p>
+                        <h4>Email</h4>
+                        <p><a href="mailto:marleynavarro@gmail.com">marleynavarro@gmail.com</a></p>
+                        <h4>Website</h4>
+                        <p><a href="www.batman.com" target="_blank">www.batman.com</a></p>
+                    </div>
+                    <div class="tab-content-wrapper">
+                        <h2>Company information</h2>
+                        <h4>Type</h4>
+                        <p>DSP</p>
+                        <h4>Number of Employees</h4>
+                        <p>143</p>
+                        <h4>Revenue</h4>
+                        <p>500$</p>
+                        <h4>Year Founded</h4>
+                        <p>1995</p>
+                        <h4>Job description</h4>
+                        <p>Crime fighting</p>
+                        <h4>Core business</h4>
+                        <p>Crime fighting</p>
+                        <h4>Company Owner Name</h4>
+                        <p>Bruce Wayne</p>
+                        <h4>Top Competitors</h4>
+                        <p>Avengers, X-Men</p>
+                    </div>
+                    <div class="tab-content-wrapper">
+                        <h2>Notes</h2>
+                        <textarea name="" id="" cols="30" rows="5" placeholder="These are some notes about Batman. There is not much to say except that he is indeed, Batman." readonly></textarea>
+                    </div>
+                </div>
+                <div id="tab4" class="tab-content">
+                    <button class="tab-edit-button"><ion-icon name="pencil-outline"></ion-icon>Edit</button>
+                    
+                    
+                    <div class="tab-content-wrapper contract-table">
+                        <h2>Contract List</h2>
+                        <li>
+                            <h4>Contract Start Date</h4>
+                            <h4>Contract Expiration Date</h4>
+                            <h4>Contract URL</h4>
+                        </li>
+                        <br>
+                        <li>
+                            <p>15.6.2020.</p>
+                            <p>15.6.2021.</p>
+                            <p><a href="#_"><ion-icon name="eye"></ion-icon></a></p>
+                        </li>
+                        <li>
+                            <p>9.8.2019.</p>
+                            <p>10.6.2020.</p>
+                            <p><a href="#_"><ion-icon name="eye"></ion-icon></a></p>
+                        </li>
+                    </div>
+                </div>
+                <div id="tab5" class="tab-content">
+                    <button class="tab-edit-button"><ion-icon name="pencil-outline"></ion-icon>Edit</button>
+                    <div class="tab-content-wrapper">
+                        <h2>Offers information</h2>
+                        <h4>Offer Title</h4>
+                        <p>Name of Offer</p>
+                        <h4>Offer Category</h4>
+                        <p>Category of Offer</p>
+                        <h4>Seasonal Promotion</h4>
+                        <p>Yes</p>
+                        <h4>Optimize Offer</h4>
+                        <p>Optimize Offer Text</p>
+                        <h4>Send offer timestamp</h4>
+                        <p>14.14.2020.</p>
+                        <h4>Push Network</h4>
+                        <p>No</p>
+                    </div>
+                    <div class="tab-content-wrapper">
+                        <h2>Notes</h2>
+                        <textarea name="" id="" cols="30" rows="5" placeholder="These are some notes about Batman. There is not much to say except that he is indeed, Batman." readonly></textarea>
+                    </div>
+                    
+                </div>
+                <div id="tab6" class="tab-content">
+                    <select name="partner-select" id="partner-select">
+                        <option value="select-partner" selected hidden>Select a partner</option>
+                        <option value="1">Batman Enterprises</option>
+                        <option value="2">Wayne Enterprises</option>
+                        <option value="3">Catwoman Enterprises</option>
+                        <option value="6">Joker Enterprises</option>
+                        <option value="4">Bane Enterprises</option>
+                    </select>
+                    <button class="tab-edit-button"><ion-icon name="pencil-outline"></ion-icon>Edit</button>
+                    <div class="tab-content-wrapper" data-attr="Wayne Enterprises">
+                        <h2>Partners contact information</h2>
+                        <h4>Company Name</h4>
+                        <p>Wayne Enterprises</p>
+                        <h4>Phone</h4>
+                        <p><a href="tel:+49-69-20570-001">+49-69-20570-001</a></p>
+                        <h4>Email</h4>
+                        <p><a href="mailto:wayneenterprises@gmail.com">wayneenterprises@gmail.com</a></p>
+                        <h4>Website</h4>
+                        <p><a href="#_">www.wayneenterprises.com</a></p>
+                    </div>
+                    <div class="tab-content-wrapper" data-attr="Wayne Enterprises">
+                        <h2>Partners Company Information</h2>
+                        <h4>Number of Employees</h4>
+                        <p>402</p>
+                        <h4>Revenue</h4>
+                        <p>500.000$</p>
+                        <h4>Year Founded</h4>
+                        <p>2000</p>
+                        <h4>Job Description</h4>
+                        <p>Stealth Manufacturing</p>
+                        <h4>Core Business</h4>
+                        <p>Crime Fighting</p>
+                        <h4>Company Owner Name</h4>
+                        <p>Bruce Wayne</p>
+                    </div>
+                    <div class="tab-content-wrapper" data-attr="Bane Enterprises">
+                        <h2>Partners contact information</h2>
+                        <h4>Company Name</h4>
+                        <p>Bane Enterprises</p>
+                        <h4>Phone</h4>
+                        <p><a href="tel:+49-69-20570-001">+49-69-20570-001</a></p>
+                        <h4>Email</h4>
+                        <p><a href="mailto:wayneenterprises@gmail.com">wayneenterprises@gmail.com</a></p>
+                        <h4>Website</h4>
+                        <p><a href="#_">www.baneenterprises.com</a></p>
+                    </div>
+                    <div class="tab-content-wrapper" data-attr="Bane Enterprises">
+                        <h2>Partners Company Information</h2>
+                        <h4>Number of Employees</h4>
+                        <p>402</p>
+                        <h4>Revenue</h4>
+                        <p>500.000$</p>
+                        <h4>Year Founded</h4>
+                        <p>2000</p>
+                        <h4>Job Description</h4>
+                        <p>Stealth Manufacturing</p>
+                        <h4>Core Business</h4>
+                        <p>Crime Fighting</p>
+                        <h4>Company Owner Name</h4>
+                        <p>Bruce Wayne</p>
+                    </div>
+                    <div class="tab-content-wrapper" data-attr="Joker Enterprises">
+                        <h2>Partners contact information</h2>
+                        <h4>Company Name</h4>
+                        <p>Joker Enterprises</p>
+                        <h4>Phone</h4>
+                        <p><a href="tel:+49-69-20570-001">+49-69-20570-001</a></p>
+                        <h4>Email</h4>
+                        <p><a href="mailto:wayneenterprises@gmail.com">wayneenterprises@gmail.com</a></p>
+                        <h4>Website</h4>
+                        <p><a href="#_">www.jokerenterprises.com</a></p>
+                    </div>
+                    <div class="tab-content-wrapper" data-attr="Joker Enterprises">
+                        <h2>Partners Company Information</h2>
+                        <h4>Number of Employees</h4>
+                        <p>402</p>
+                        <h4>Revenue</h4>
+                        <p>500.000$</p>
+                        <h4>Year Founded</h4>
+                        <p>2000</p>
+                        <h4>Job Description</h4>
+                        <p>Stealth Manufacturing</p>
+                        <h4>Core Business</h4>
+                        <p>Crime Fighting</p>
+                        <h4>Company Owner Name</h4>
+                        <p>Bruce Wayne</p>
+                    </div>
+                    <div class="tab-content-wrapper" data-attr="Catwoman Enterprises">
+                        <h2>Partners contact information</h2>
+                        <h4>Company Name</h4>
+                        <p>Catwoman Enterprises</p>
+                        <h4>Phone</h4>
+                        <p><a href="tel:+49-69-20570-001">+49-69-20570-001</a></p>
+                        <h4>Email</h4>
+                        <p><a href="mailto:wayneenterprises@gmail.com">wayneenterprises@gmail.com</a></p>
+                        <h4>Website</h4>
+                        <p><a href="#_">www.wayneenterprises.com</a></p>
+                    </div>
+                    <div class="tab-content-wrapper" data-attr="Catwoman Enterprises">
+                        <h2>Partners Company Information</h2>
+                        <h4>Number of Employees</h4>
+                        <p>402</p>
+                        <h4>Revenue</h4>
+                        <p>500.000$</p>
+                        <h4>Year Founded</h4>
+                        <p>2000</p>
+                        <h4>Job Description</h4>
+                        <p>Stealth Manufacturing</p>
+                        <h4>Core Business</h4>
+                        <p>Crime Fighting</p>
+                        <h4>Company Owner Name</h4>
+                        <p>Bruce Wayne</p>
+                    </div>
+                    <div class="tab-content-wrapper" data-attr="Batman Enterprises">
+                        <h2>Partners contact information</h2>
+                        <h4>Company Name</h4>
+                        <p>Batman Enterprises</p>
+                        <h4>Phone</h4>
+                        <p><a href="tel:+49-69-20570-001">+49-69-20570-001</a></p>
+                        <h4>Email</h4>
+                        <p><a href="mailto:wayneenterprises@gmail.com">wayneenterprises@gmail.com</a></p>
+                        <h4>Website</h4>
+                        <p><a href="#_">wwwbatmanenterprises.com</a></p>
+                    </div>
+                    <div class="tab-content-wrapper" data-attr="Batman Enterprises">
+                        <h2>Partners Company Information</h2>
+                        <h4>Number of Employees</h4>
+                        <p>402</p>
+                        <h4>Revenue</h4>
+                        <p>500.000$</p>
+                        <h4>Year Founded</h4>
+                        <p>2000</p>
+                        <h4>Job Description</h4>
+                        <p>Stealth Manufacturing</p>
+                        <h4>Core Business</h4>
+                        <p>Crime Fighting</p>
+                        <h4>Company Owner Name</h4>
+                        <p>Bruce Wayne</p>
+                    </div>
+                </div>
+                <div id="tab7" class="tab-content">
+                    <button class="tab-edit-button"><ion-icon name="pencil-outline"></ion-icon>Edit</button>
+                    <div class="tab-content-wrapper">
+                        <h2>Country information</h2>
+                        <h4>Capital City</h4>
+                        <p>Gotham</p>
+                        <h4>Official Language</h4>
+                        <p>English</p>
+                        <h4>Ethnic Groups</h4>
+                        <p>White, Asian</p>
+                        <h4>Religion</h4>
+                        <p>Christianity</p>
+                        <h4>Legislature</h4>
+                        <p>Unicameral</p>
+                        <h4>Government</h4>
+                        <p>Democracy</p>
+                        <h4>Area Size</h4>
+                        <p>384,345 m<sup>2</sup></p>
+                    </div>
+                    <div class="tab-content-wrapper">
+                        <h2>Country Information</h2>
+                        <h4>Population Size</h4>
+                        <p>100,000</p>
+                        <h4>Currency</h4>
+                        <p>Dollar</p>
+                        <h4>GDP Rate</h4>
+                        <p>50$</p>
+                        <h4>Time Zone</h4>
+                        <p>CET; UTC+01:00</p>
+                        <h4>Driving Side</h4>
+                        <p>Left</p>
+                        <h4>Country Code</h4>
+                        <p>+385</p>
+                        <h4>Famous Sights</h4>
+                        <p>Arkham Asylum</p>
+                    </div>
+                    <div class="tab-content-wrapper">
+                        <h2>Notes</h2>
+                        <textarea name="" id="" cols="30" rows="5" placeholder="These are some notes about Batman. There is not much to say except that he is indeed, Batman." readonly></textarea>
+                    </div>
+                </div>
+                <div id="tab8" class="tab-content">
+                    <div class="tab-content-wrapper correspondence-tab">
+                        <div class=" correspondence-box">
+                            <div class="networks-search-wrap">
+                                <form action="/action_page.php">
+                                    <input class="networks-search" type="search" placeholder="Search Correspondence">
+                                    <button class="networks-search-button" type="submit"><ion-icon name="search-outline" role="img" class="md hydrated" aria-label="search outline"></ion-icon> </button>
+                                </form>
+                            </div>
+                            <button class="add-correspondence"><ion-icon name="add"></ion-icon>Add New</button>
+                            <h2>Correspondence call information</h2>
+                            <div class="correspondence-titles">
+                                <h4>User</h4>
+                                <h4>Contact Type</h4>
+                                <h4>Timestamp</h4>
+                                <h4>Notes</h4>
+                                <h4>Images</h4>
+                            </div>
+                            <div class="timeline-box">
+                                <p><ion-icon name="calendar"></ion-icon> 16.8.2021.</p>
+                                <ion-icon name="logo-skype"></ion-icon>
+                                <textarea name="" id="" cols="30" rows="5" placeholder="These are some notes about Batman. There is not much to say except that he is indeed, Batman. Batman[a] is a superhero who appears in American comic books published by DC Comics. The character was created by artist Bob Kane and writer Bill Finger, and debuted in the 27th issue of the comic book Detective Comics on March 30, 1939. In the DC Universe continuity, Batman is the alias of Bruce Wayne, a wealthy American playboy, philanthropist, and industrialist who resides in Gotham City. Batman's origin story features him swearing vengeance against criminals after witnessing the murder of his parents Thomas and Martha, a vendetta tempered with the ideal of justice." readonly></textarea>  
+                                <p>Marley Navarro</p>
+                                <div class="timeline-img-wrap">
+                                    <a href="img/chat-snip-1.jpg" class="correspondence-img">
+                                        <ion-icon name="image"></ion-icon>
+                                    </a>
+                                    <a href="img/chat-snip-2.jpg" class="correspondence-img">
+                                        <ion-icon name="image"></ion-icon>
+                                    </a>
+                                    <a href="img/chat-snip-3.jpg" class="correspondence-img">
+                                        <ion-icon name="image"></ion-icon>
+                                    </a>
+                                </div>
+                                <!-- <a href="#_" class="edit-correspondence" title="Edit">
+                                    <ion-icon name="create"></ion-icon>
+                                </a> -->
+                                <ion-icon name="create" class="edit-correspondence-btn"></ion-icon>
+                            </div>
+                        
+                        <div class="timeline-box">
+                            <p><ion-icon name="calendar"></ion-icon> 16.8.2021.</p>
+                            <ion-icon name="paper-plane"></ion-icon>
+                            <textarea name="" id="" cols="30" rows="5" placeholder="These are some notes about Batman. There is not much to say except that he is indeed, Batman." readonly></textarea>  
+                            <p>Marley Navarro</p>
+                            <div class="timeline-img-wrap">
+                                <a href="img/chat-snip-4.jpg" class="correspondence-img">
+                                    <ion-icon name="image"></ion-icon>
+                                </a>
+                                <a href="img/chat-snip-6.jpg" class="correspondence-img">
+                                    <ion-icon name="image"></ion-icon>
+                                </a>
+                            </div>
+                            <!-- <a href="#_" class="edit-correspondence" title="Edit">
+                                <ion-icon name="create"></ion-icon>
+                            </a> -->
+                            <ion-icon name="create" class="edit-correspondence-btn"></ion-icon>
+                        </div>
+                        
+                        <div class="timeline-box">
+                            <p><ion-icon name="calendar"></ion-icon> 16.8.2021.</p>
+                            <ion-icon name="call"></ion-icon>
+                            <textarea name="" id="" cols="30" rows="5" placeholder="These are some notes about Batman. There is not much to say except that he is indeed, Batman." readonly></textarea>  
+                            <p>Marley Navarro</p>
+                            <div class="timeline-img-wrap">
+                                <a href="img/chat-snip-4.jpg" class="correspondence-img">
+                                    <ion-icon name="image"></ion-icon>
+                                </a>
+                                <a href="img/chat-snip-6.jpg" class="correspondence-img">
+                                    <ion-icon name="image"></ion-icon>
+                                </a>
+                                <a href="img/chat-snip-6.jpg" class="correspondence-img">
+                                    <ion-icon name="image"></ion-icon>
+                                </a>
+                                <a href="img/chat-snip-6.jpg" class="correspondence-img">
+                                    <ion-icon name="image"></ion-icon>
+                                </a>
+                                <a href="img/chat-snip-6.jpg" class="correspondence-img">
+                                    <ion-icon name="image"></ion-icon>
+                                </a>
+                                <a href="img/chat-snip-6.jpg" class="correspondence-img">
+                                    <ion-icon name="image"></ion-icon>
+                                </a>
+                                <a href="img/chat-snip-6.jpg" class="correspondence-img">
+                                    <ion-icon name="image"></ion-icon>
+                                </a>
+                                <a href="img/chat-snip-6.jpg" class="correspondence-img">
+                                    <ion-icon name="image"></ion-icon>
+                                </a>
+                                <a href="img/chat-snip-6.jpg" class="correspondence-img">
+                                    <ion-icon name="image"></ion-icon>
+                                </a>
+                                <a href="img/chat-snip-6.jpg" class="correspondence-img">
+                                    <ion-icon name="image"></ion-icon>
+                                </a>
+                                <a href="img/chat-snip-6.jpg" class="correspondence-img">
+                                    <ion-icon name="image"></ion-icon>
+                                </a>
+                                <a href="img/chat-snip-6.jpg" class="correspondence-img">
+                                    <ion-icon name="image"></ion-icon>
+                                </a>
+                                <a href="img/chat-snip-6.jpg" class="correspondence-img">
+                                    <ion-icon name="image"></ion-icon>
+                                </a>
+                                <a href="img/chat-snip-6.jpg" class="correspondence-img">
+                                    <ion-icon name="image"></ion-icon>
+                                </a>
+                                <a href="img/chat-snip-6.jpg" class="correspondence-img">
+                                    <ion-icon name="image"></ion-icon>
+                                </a>
+                                <a href="img/chat-snip-6.jpg" class="correspondence-img">
+                                    <ion-icon name="image"></ion-icon>
+                                </a>
+                                <a href="img/chat-snip-6.jpg" class="correspondence-img">
+                                    <ion-icon name="image"></ion-icon>
+                                </a>
+                            </div>
+                            <!-- <a href="#_" class="edit-correspondence" title="Edit">
+                                <ion-icon name="create"></ion-icon>
+                            </a> -->
+                            <ion-icon name="create" class="edit-correspondence-btn"></ion-icon>
+                        </div>
+
+                        <div class="timeline-box">
+                            <p><ion-icon name="calendar"></ion-icon> 16.8.2021.</p>
+                            <ion-icon name="mail"></ion-icon>
+                            <textarea name="" id="" cols="30" rows="5" placeholder="These are some notes about Batman. There is not much to say except that he is indeed, Batman." readonly></textarea>  
+                            <p>Marley Navarro</p>
+                            <div class="timeline-img-wrap">
+                                <a href="img/chat-snip-4.jpg" class="correspondence-img">
+                                    <ion-icon name="image"></ion-icon>
+                                </a>
+                                <a href="img/chat-snip-6.jpg" class="correspondence-img">
+                                    <ion-icon name="image"></ion-icon>
+                                </a>
+                            </div>
+                            <!-- <a href="#_" class="edit-correspondence" title="Edit">
+                                <ion-icon name="create"></ion-icon>
+                            </a> -->
+                            <a href="#_" title="Edit correspondence">
+                                <ion-icon name="create" class="edit-correspondence-btn"></ion-icon>
+                            </a>
+                        </div>
+                        
+                    </div>
+                        <!-- <div class=" correspondence-box">
+                            <h2>Correspondence call information</h2>
+                            <div class="timeline-box">
+                                <h4>Contact Type</h4>
+                                <p>Skype</p>
+                                <h4>Timestamp</h4>
+                                <p>16.8.2021.</p>
+                                <textarea name="" id="" cols="30" rows="5" placeholder="These are some notes about Batman. There is not much to say except that he is indeed, Batman." readonly></textarea>  
+                            </div>
+                            <div class="correspondence-box-right">
+                                <img src="img/chat-snip-4.jpg" alt="">
+                                <img src="img/chat-snip-5.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class=" correspondence-box">
+                            <h2>Correspondence call information</h2>
+                            <div class="timeline-box">
+                                <h4>Contact Type</h4>
+                                <p>Skype</p>
+                                <h4>Timestamp</h4>
+                                <p>16.8.2021.</p>
+                                <textarea name="" id="" cols="30" rows="5" placeholder="These are some notes about Batman. There is not much to say except that he is indeed, Batman." readonly></textarea>  
+                            </div>
+                            <div class="correspondence-box-right">
+                                <img src="img/chat-snip-5.jpg" alt="">
+                                <img src="img/chat-snip-1.jpg" alt="">
+                                <img src="img/chat-snip-6.jpg" alt="">
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <footer><hr>Copyright © 2021 <b>IDB Mobile Technology</b></footer>
+        </div>
+    </main>
+  
+    <div class="net-profile-saved">
+        <h3>Network profile data has been updated successfully.</h3>
+    </div>
+
+    <div class="net-profile-error">
+        <h3>Error. Network profile Data has not been updated.</h3>
+    </div>
+    
+    <div class="modal-image-wrap">
+        <ion-icon class="close-modal" name="close"></ion-icon>
+        <img class="modal-image" src="" alt="">
+    </div>
+
+    <!-- EDIT CORRESPONDENCE POPUP -->
+    <div class="edit-correspondence-wrap">
+        <div class="edit-correspondence-popup">
+            <ion-icon name="close" class="close-popup md hydrated" role="img" aria-label="close"></ion-icon>
+            <h2>Edit Correspondence</h2>
+            <form action="/action_page.php" id="correspondence-edit-form"> 
+                <span>
+                            <label>Contact Type</label>
+                            <select name="contact_type" >
+                                <option value="Skype">Skype</option>
+                                <option value="DM">DM</option>
+                                <option value="Call">Call</option>
+                                <option value="Mail">Mail</option>
+                            </select>
+                </span>
+                <span>
+                            <label>Timestamp</label>
+                            <input type="datetime-local" name="timestamp_called">
+                        </span>
+                <span>
+                            <label>Correspondence Note</label>
+                            <textarea name="note" cols="30" rows="5" placeholder="These are some notes about Batman. There is not much to say except that he is indeed, Batman."></textarea>  
+                </span>
+                <span>                      
+                            <label>Correspondence Screenshots</label>
+                            <input type="file" name="snip_attachment" accept="image/*" multiple>
+                        </span>
+                            <button type="submit" class="tab-edit-button" form="correspondence-edit-form"><ion-icon name="save" role="img" class="md hydrated" aria-label="save"></ion-icon> Save</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="contract_delete_wrap">
+        <div class="contract_delete_popup">
+            <ion-icon name="alert"></ion-icon>
+            <h2>This will <span>permanently delete</span> the selected contract. Are you sure?</h2>
+            <button class="contract_delete_yes">Yes</button>
+            <button class="contract_delete_no">No</button>
+        </div>
+    </div>
+    <!-- EDIT CORRESPONDENCE POPUP -->
+  
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="js/networks-list-filter.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="js/responsive.js"></script>
+    <script>
+        //COLLAPSE SIDEBAR
+        $(".collapse-sidebar").on("click", function(){
+            $(".main-sidebar").toggleClass("collapsed-sidebar");
+            $(".sidebar-title").delay(50).toggle(0);
+            $(".main-container").toggleClass("collapsed-main");
+            $(".collapse-sidebar ion-icon").toggleClass("rotate");
+        });
+    </script>
+    <script>
+        //PROFILE DROPDOWN
+        $(".li-profile-img").on("click", function(){
+            $(".profile-dropdown").slideToggle(200);
+        });
+    </script>
+    <script>
+        //PROFILE TABS INLINE
+        /*function openTabs(tabName){
+            var i;
+            var x = document.getElementsByClassName("tab-content");
+            for (i=0; i< x.length; i++){
+                x[i].style.display = "none";
+            }
+            document.getElementById(tabName).style.display = "block";  
+            document.getElementById(tabName).style.display = "block";  
+        }*/
+        
+        //PROFILE TABS
+        $(".tablinks").on("click", function(){
+           
+            if($(".tablinks").hasClass("tab-bg")){
+                $(".tablinks").removeClass("tab-bg");
+                $(this).addClass("tab-bg");
+            }
+            else{
+                $(this).addClass("tab-bg");
+            }
+        });
+        
+        $("#tablinks1").click(function(){
+            $("#tab1").show();
+            $("#tab2, #tab3, #tab4, #tab5, #tab6, #tab7, #tab8").hide();
+        });
+        $("#tablinks2").click(function(){
+            $("#tab2").show();
+            $("#tab1, #tab3, #tab4, #tab5, #tab6, #tab7, #tab8").hide();
+        });
+        $("#tablinks3").click(function(){
+            $("#tab3").show();
+            $("#tab1, #tab2, #tab4, #tab5, #tab6, #tab7, #tab8").hide();
+        });
+        $("#tablinks4").click(function(){
+            $("#tab4").show();
+            $("#tab1, #tab2, #tab3, #tab5, #tab6, #tab7, #tab8").hide();
+        });
+        $("#tablinks5").click(function(){
+            $("#tab5").show();
+            $("#tab1, #tab2, #tab3, #tab4, #tab6, #tab7, #tab8").hide();
+        });
+        $("#tablinks6").click(function(){
+            $("#tab6").show();
+            $("#tab1, #tab2, #tab3, #tab4, #tab5, #tab7, #tab8").hide();
+        });
+        $("#tablinks7").click(function(){
+            $("#tab7").show();
+            $("#tab1, #tab2, #tab3, #tab4, #tab5, #tab6, #tab8").hide();
+        });
+        $("#tablinks8").click(function(){
+            $("#tab8").show();
+            $("#tab1, #tab2, #tab3, #tab4, #tab5, #tab6, #tab7").hide();
+        });
+    </script>
+    <script>
+        //IMAGE CLICK ZOOM
+      
+    </script>
+    <script>
+        //CORRESPONDENCE IMG NEW TAB
+        if($(window).width() < 1000){
+        $('.correspondence-box-right img').click(function() {
+            var loc = $(this).attr("src");
+            window.open(loc, '_blank');
+        });
+    }
+        else{
+            $(".correspondence-box-right img").click(function() {
+            $(this).toggleClass("zoom_img");
+            $(this).siblings().removeClass("zoom_img");
+        });
+    }
+    </script>
+    <script>
+        //CLICK OUTSIDE CLOSE DROPDOWN
+        $(".main-container").on("click", function(){
+            $(".notification-dropdown").slideUp(200);
+            $(".profile-dropdown").slideUp(200);
+        });
+    </script>
+    <script>
+        // MODAL
+        $(".correspondence-img").on("click", function(event){
+            event.preventDefault();
+            var addressValue = $(this).attr("href");
+            $(".modal-image-wrap").show();
+            $(".modal-image").attr("src", addressValue).show();
+        });
+
+        $(".modal-image").on("click", function(){
+            window.open( $(this).attr('src') );
+            });
+
+        $(".close-modal").on("click", function(event){
+            $(".modal-image-wrap, .modal-image").hide();
+        });
+
+      
+    </script>
+
+
+    <script>
+        //TEST EDIT COMPANY
+        $(".edit-company-btn").on("click", function(){
+            var test = $(this).attr("data-entry");
+            $('#edit-company-form:not([data-atrr = "'+ test +'"])').hide();
+            $(".close-popup, .save-edit-company").on("click", function(){
+                $('#edit-company-form:not([data-atrr = "'+ test +'"])').show();
+        });
+        });
+        
+        if($("#edit-company-form").is(":hidden"))
+        {
+            $("#edit-company-form").css("display", "block");
+        }
+    </script>
+
+    <script>
+        // EDIT CORRESPONDENCE CLICK POPUP
+        $(".edit-correspondence").on("click", function(){
+            $(".edit-correspondence-wrap").show();
+        });
+
+        $(".close-popup").on("click", function(){
+            $(".edit-correspondence-wrap").fadeOut();
+        });
+    </script>
+    <script>
+        // DELETE CONTRACT
+
+        $(".contract_delete").on("click", function(){
+            $(this).toggleClass("contract_delete_pressed");
+            $(".contract_delete_icon").fadeToggle();
+            if($(".contract_delete").hasClass("contract_delete_pressed"))
+            {
+                $(".contract_delete a").contents().last().replaceWith(" Finish Deleting");
+            }
+
+            else{
+                $(".contract_delete a").contents().last().replaceWith(" Delete Contract");
+            }
+        });
+
+        $(".contract_delete_icon").on("click", function(event){
+    
+
+            var target = $(event.currentTarget);
+            event.stopPropagation()
+
+            $(".contract_delete_wrap").fadeIn("fast");
+
+            $(".contract_delete_yes").unbind().on("click", function(){
+                $(".contract_delete_wrap").fadeOut("fast");
+            
+            
+            $(target).parent().animate({
+                        opacity:0,
+                        marginRight:"-100%",
+                        marginLeft:"100%"
+                    },700, 'linear', function(){
+                    
+                        $(this).remove();
+                    
+                    });
+        });
+        });
+
+        $(".contract_delete_no").on("click", function(){
+            $(".contract_delete_wrap").fadeOut("fast");
+        });
+    </script>
+    <script>
+        // EYE ICON HOVER IF NO CONTRACT FILE
+        $(".timeline-img-wrap").on("mouseover", function(){
+            if($(this).find(".disable").length !== 0)
+            {
+                $(this).attr("title", "No contract saved");
+        
+            }
+            else{
+                $(this).attr("title", "View contract");
+            }
+            });
+    </script>
+    <script>
+         // PARTNER SELECT
+          $("#partner-select").change(function(){
+
+          var option_value = $("#partner-select option:selected").attr("data-attr");
+          
+          $("#tab6 .show_partner_update[data-attr='" + option_value +"']").css("display", "inline-table");
+          $("#tab6 .show_partner_update[data-attr!='" + option_value +"']").hide();         
+          });
+    </script>
+    <script>
+        // CONTRACT CHOOSE FILE DISPLAY CURRENT FILE
+        $("input[name='contract_type']").on("click", function(){
+        var test = $(".custom-file-input").attr("value");
+        alert(test);
+    })
+    </script>
+</body>
+</head>
+</html>

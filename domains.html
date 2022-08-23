@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IDB CRM - Domains</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no;”" />
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/networks-list-style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+<body>
+    <aside class="main-sidebar">
+        <div class="sidebar-container">
+            <nav>
+                <ul>
+                    <li class="drop"><a href="#_" title="Organization"><ion-icon name="people-outline"></ion-icon><span class="sidebar-title">Organization <ion-icon name="chevron-down-outline" class="drop_icon"></ion-icon></a>
+                        <ul class="side_drop">
+                            <li><a href="#_" title="Operations" class="sidebar-title"><ion-icon name="cog-outline"></ion-icon> Operations</a></li>
+                            <li><a href="#_" title="Marketing" class="sidebar-title"><ion-icon name="megaphone-outline"></ion-icon> Marketing</a></li>
+                        </ul>
+                    </span></li>
+                    <li class="drop"><a href="#_" title="Organization"><ion-icon name="cog-outline"></ion-icon><span class="sidebar-title">Operations <ion-icon name="chevron-down-outline" class="drop_icon"></ion-icon></a>
+                        <ul class="side_drop">
+                            <li><a href="#_" title="Operations" class="sidebar-title"><ion-icon name="calendar-number-outline"></ion-icon> Events</a></li>
+                            <li><a href="#_" title="Marketing" class="sidebar-title"><ion-icon name="phone-portrait-outline"></ion-icon> Providers</a></li>
+                            <li><a href="#_" title="Marketing" class="sidebar-title"><ion-icon name="earth-outline"></ion-icon> Domains</a></li>
+                            <li><a href="#_" title="Marketing" class="sidebar-title"><ion-icon name="star-outline"></ion-icon> Highlights</a></li>
+                            <li><a href="#_" title="Marketing" class="sidebar-title"><ion-icon name="calendar-outline"></ion-icon> Meetings</a></li>
+                            <li><a href="#_" title="Marketing" class="sidebar-title"><ion-icon name="storefront-outline"></ion-icon> Markets</a></li>
+                        </ul>
+                    </span></li>
+                    <li><a href="#_" title="Networks"><ion-icon name="globe-outline"></ion-icon><span class="sidebar-title">Networks</span></a></li>
+                    <li><a href="#_" title="My Contacts"><ion-icon name="library-outline"></ion-icon><span class="sidebar-title">My Contacts</span></a></li>
+                    <li><a href="#_" title="Markets"><ion-icon name="storefront-outline"></ion-icon><span class="sidebar-title">Markets</ion-icon></span></a></li>
+                    <li><a href="#_" title="My Profile"><ion-icon name="people-outline"></ion-icon><span class="sidebar-title">My Profile</span></a></li>
+                    <li class="collapse-sidebar"><a href="#_"><ion-icon name="play-skip-back-outline"></ion-icon></a></li>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+    <header class="main-header">
+        <div class="logo-container">
+            <a href="#_">
+                <img class="logo-img" src="img/logo.svg" alt="IDB CRM Logo">
+            </a>
+        </div>
+        <div class="header-right">
+            <div class="header-right-icons">
+                <ul>
+                   <li>
+                       <a href="#_" title="Notifications"><span class="notification-counter">10</span><ion-icon name="notifications-outline"></ion-icon></a>
+                       <div class="notification-dropdown">
+                           <ul>
+                               <li><a href="#"><ion-icon name="calendar-outline"></ion-icon>Meeting #1
+                                <span class="notification-desc">Meeting description</span></a>
+                               </li>
+                               <li><a href="#"><ion-icon name="reader-outline"></ion-icon>Task #1
+                                <span class="notification-desc">Task description - This time a longer one</span></a>    
+                                </li>
+                               <li><a href="#"><ion-icon name="reader-outline"></ion-icon>Task #2
+                                <span class="notification-desc">Task description</span></a>
+                            </li>
+                               <li><a href="#"><ion-icon name="calendar-outline"></ion-icon>Meeting #2
+                                <span class="notification-desc">Meeting description</span></a>
+                            </li>
+                               <li><a href="#"><ion-icon name="calendar-outline"></ion-icon>Meeting #3
+                                <span class="notification-desc">Meeting description</span></a>
+                        </li>
+                               <li><a href="#"><ion-icon name="calendar-outline"></ion-icon>Meeting #4
+                                <span class="notification-desc">Meeting description</span></a>
+                        </li>
+                               <li><a href="#"><ion-icon name="calendar-outline"></ion-icon>Meeting #5
+                                <span class="notification-desc">Meeting description</span></a>
+                        </li>
+                               <li><a href="#"><ion-icon name="reader-outline"></ion-icon>Task #3
+                                <span class="notification-desc">Task description</span></a>
+                        </li>
+                               <li><a href="#"><ion-icon name="calendar-outline"></ion-icon>Meeting #6
+                                <span class="notification-desc">Meeting description</span></a>
+                        </li>
+                               <li><a href="#"><ion-icon name="reader-outline"></ion-icon>Task #4
+                                <span class="notification-desc">Task description</span></a>
+                        </li>
+                           </ul>
+                           <button>View All</button>
+                       </div>
+                   </li>
+                   <li class="create-task-button"><a href="#_"><ion-icon name="add-outline"></ion-icon>Create Task</a></li>
+                   <li class="li-profile-img"><a href="#_">Ime Prezime <img class="header-profile-pic" src="img/profile-pic.jpg" alt=""></a>
+                        <div class="profile-dropdown">
+                            <a href="#_"><ion-icon name="person-outline"></ion-icon> My Profile</a> 
+                            <a href="#_"><ion-icon name="options-outline"></ion-icon> Panel</a>
+                            <a href="#_"><ion-icon name="settings-outline"></ion-icon> Settings</a>
+                            <a href="#_"><ion-icon name="exit-outline"></ion-icon> Logout</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <div class="main-container">
+            <h1>Domains</h1>
+
+            <div class="domains_main_wrap">
+                <div class="domain_filters_wrap">
+                    <form action="" class="domain_search">
+                        <input type="search" placeholder="Domain Name">
+                        <button type="submit"><ion-icon name="search"></ion-icon></button>
+                    </form>
+                    <div class="market-filter">
+                        <input type="text" list="filter-by-market" placeholder="Filter by Market" class="market_filter">
+                        <datalist name="" id="filter-by-market">
+                            <option value="All"></option>
+                            <option value="Saudi_Arabia"></option>
+                            <option value="Pakistan"></option>
+                            <option value="Canada"></option>
+                            <option value="Iran"></option>
+                            <option value="Qatar"></option>
+                        </datalist>
+                    </div>
+                    <div class="platform-filter">
+                        <input type="text" list="filter-by-platform" placeholder="Filter by Platform" class="market_filter">
+                        <datalist name="" id="filter-by-platform">
+                            <option value="All"></option>
+                            <option value="NameCheap"></option>
+                            <option value="Dreamhost"></option>
+                            <option value="GoDaddy"></option>
+                            <option value="Bluehost"></option>
+                            <option value="Hover"></option>
+                        </datalist>
+                    </div>
+                    <div class="expire-filter">
+                        <!-- <label for="filter-by-expire">Filter by Expire Date</label> -->
+                        <div id="reportrange" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%">
+                            <i class="fa fa-calendar"></i>&nbsp;
+                            <span></span> <i class="fa fa-caret-down"></i>
+                        </div> 
+                    </div>
+                    <button class="create_domain">
+                        <a><ion-icon name="add-outline"></ion-icon> Add New Domain</a>
+                    </button>
+                    <button class="delete_domain_btn">
+                        <a><ion-icon name="trash" role="img" class="md hydrated" aria-label="trash"></ion-icon> Delete Domain</a>
+                    </button>
+                </div>
+                <div class="domains_list_wrap">
+                    <div class="domain_titles">
+                        <h4>Domain</h4>
+                        <h4>Date Bought</h4>
+                        <h4>Expiration Date</h4>
+                        <h4>Current Platform</h4>
+                        <h4>Status</h4>
+                        <h4>Market</h4>
+                    </div>
+                    <div class="domains_list_wrapper">
+                    <div class="domain_list">
+                        <div class="domain_info">
+                            <p class="domain_name">nakednews.me</p>
+                            <p class="domain_bought_date">2020-05-13</p>
+                            <p class="domain_exp-date">2022-05-13</p>
+                            <p class="domain_platform_current">NameCheap</p>
+                            <p class="domain_status">Renewed</p>
+                            <p class="domain_market">Saudi Arabia</p>
+                        </div>
+                        <div class="domain_more">
+                            <div class="domain_more_flex">	
+                                <p class="domain_login">login.example@login</p>
+                                <p class="domain_platform_before">Joker</p>
+                                <p class="domain_account">Platform Account 1</p>
+                                <p class="domain_type">Java Services</p>
+                                <p class="domain_price">55.67</p>
+                                <p class="domain_currency">€</p>
+                                <p class="domain-connection">new service in Romania NTH provider</p>
+                            </div>
+                        </div>
+                        <p class="domain_edit" title="Edit Domain"><ion-icon name="create-outline"></ion-icon></p>
+                        <p class="domain_delete" title="Delete Domain"><ion-icon name="trash" role="img" class="md hydrated" aria-label="trash"></ion-icon></p>
+                        <button class="show_domain_more" title="Show More Domain Info"><ion-icon name="chevron-down"></ion-icon></button>
+                    </div>
+                    <div class="domain_list">
+                        <div class="domain_info">
+                            <p class="domain_name">yogabuddy.fun</p>
+                            <p class="domain_bought_date">2019-08-22</p>
+                            <p class="domain_exp-date">2021-01-07</p>
+                            <p class="domain_platform_current">Dreamhost</p>
+                            <p class="domain_status">Not Renewed</p>
+                            <p class="domain_market">Pakistan</p>
+                        </div>
+                        <div class="domain_more">
+                            <div class="domain_more_flex">	
+                                <p class="domain_login">login.example@login</p>
+                                <p class="domain_platform_before">GoDaddy</p>
+                                <p class="domain_account">Platform Account Test</p>
+                                <p class="domain_type">Java Services</p>
+                                <p class="domain_price">13.82</p>
+                                <p class="domain_currency">$</p>
+                                <p class="domain-connection">new service in Romania NTH provider</p>
+                            </div>
+                        </div>
+                        <p class="domain_edit" title="Edit Domain"><ion-icon name="create-outline"></ion-icon></p>
+                        <p class="domain_delete" title="Delete Domain"><ion-icon name="trash" role="img" class="md hydrated" aria-label="trash"></ion-icon></p>
+                        <button class="show_domain_more" title="Show More Domain Info"><ion-icon name="chevron-down"></ion-icon></button>
+                    </div>
+                    <div class="domain_list">
+                        <div class="domain_info">
+                            <p class="domain_name">nakednews.me</p>
+                            <p class="domain_bought_date">2020-05-13</p>
+                            <p class="domain_exp-date">2022-05-13</p>
+                            <p class="domain_platform_current">NameCheap</p>
+                            <p class="domain_status">Renewed</p>
+                            <p class="domain_market">Saudi Arabia</p>
+                        </div>
+                        <div class="domain_more">
+                            <div class="domain_more_flex">	
+                                <p class="domain_login">login.example@login</p>
+                                <p class="domain_platform_before">Joker</p>
+                                <p class="domain_account">Platform Account 1</p>
+                                <p class="domain_type">Java Services</p>
+                                <p class="domain_price">55.67</p>
+                                <p class="domain_currency">€</p>
+                                <p class="domain-connection">new service in Romania NTH provider</p>
+                            </div>
+                        </div>
+                        <p class="domain_edit" title="Edit Domain"><ion-icon name="create-outline"></ion-icon></p>
+                        <p class="domain_delete" title="Delete Domain"><ion-icon name="trash" role="img" class="md hydrated" aria-label="trash"></ion-icon></p>
+                        <button class="show_domain_more" title="Show More Domain Info"><ion-icon name="chevron-down"></ion-icon></button>
+                    </div>
+                    <div class="domain_list">
+                        <div class="domain_info">
+                            <p class="domain_name">nakednews.me</p>
+                            <p class="domain_bought_date">2020-05-13</p>
+                            <p class="domain_exp-date">2022-05-13</p>
+                            <p class="domain_platform_current">NameCheap</p>
+                            <p class="domain_status">Renewed</p>
+                            <p class="domain_market">Saudi Arabia</p>
+                        </div>
+                        <div class="domain_more">
+                            <div class="domain_more_flex">	
+                                <p class="domain_login">login.example@login</p>
+                                <p class="domain_platform_before">Joker</p>
+                                <p class="domain_account">Platform Account 1</p>
+                                <p class="domain_type">Java Services</p>
+                                <p class="domain_price">55.67</p>
+                                <p class="domain_currency">€</p>
+                                <p class="domain-connection">new service in Romania NTH provider</p>
+                            </div>
+                        </div>
+                        <p class="domain_edit" title="Edit Domain"><ion-icon name="create-outline"></ion-icon></p>
+                        <p class="domain_delete" title="Delete Domain"><ion-icon name="trash" role="img" class="md hydrated" aria-label="trash"></ion-icon></p>
+                        <button class="show_domain_more" title="Show More Domain Info"><ion-icon name="chevron-down"></ion-icon></button>
+                    </div>
+                    <div class="domain_list">
+                        <div class="domain_info">
+                            <p class="domain_name">nakednews.me</p>
+                            <p class="domain_bought_date">2020-05-13</p>
+                            <p class="domain_exp-date">2022-05-13</p>
+                            <p class="domain_platform_current">NameCheap</p>
+                            <p class="domain_status">Renewed</p>
+                            <p class="domain_market">Saudi Arabia</p>
+                        </div>
+                        <div class="domain_more">
+                            <div class="domain_more_flex">	
+                                <p class="domain_login">login.example@login</p>
+                                <p class="domain_platform_before">Joker</p>
+                                <p class="domain_account">Platform Account 1</p>
+                                <p class="domain_type">Java Services</p>
+                                <p class="domain_price">55.67</p>
+                                <p class="domain_currency">€</p>
+                                <p class="domain-connection">new service in Romania NTH provider</p>
+                            </div>
+                        </div>
+                        <p class="domain_edit" title="Edit Domain"><ion-icon name="create-outline"></ion-icon></p>
+                        <p class="domain_delete" title="Delete Domain"><ion-icon name="trash" role="img" class="md hydrated" aria-label="trash"></ion-icon></p>
+                        <button class="show_domain_more" title="Show More Domain Info"><ion-icon name="chevron-down"></ion-icon></button>
+                    </div>
+                    <div class="domain_list">
+                        <div class="domain_info">
+                            <p class="domain_name">nakednews.me</p>
+                            <p class="domain_bought_date">2020-05-13</p>
+                            <p class="domain_exp-date">2022-05-13</p>
+                            <p class="domain_platform_current">NameCheap</p>
+                            <p class="domain_status">Renewed</p>
+                            <p class="domain_market">Saudi Arabia</p>
+                        </div>
+                        <div class="domain_more">
+                            <div class="domain_more_flex">	
+                                <p class="domain_login">login.example@login</p>
+                                <p class="domain_platform_before">Joker</p>
+                                <p class="domain_account">Platform Account 1</p>
+                                <p class="domain_type">Java Services</p>
+                                <p class="domain_price">55.67</p>
+                                <p class="domain_currency">€</p>
+                                <p class="domain-connection">new service in Romania NTH provider</p>
+                            </div>
+                        </div>
+                        <p class="domain_edit" title="Edit Domain"><ion-icon name="create-outline"></ion-icon></p>
+                        <p class="domain_delete" title="Delete Domain"><ion-icon name="trash" role="img" class="md hydrated" aria-label="trash"></ion-icon></p>
+                        <button class="show_domain_more" title="Show More Domain Info"><ion-icon name="chevron-down"></ion-icon></button>
+                    </div>
+                    <button class="more_domains">Show More</button>
+                </div>
+                <button class="excel_export"><ion-icon name="grid-outline"></ion-icon> Export to Excel</button>
+                    <div class="domain_list_form">
+                        <button class="domain_edit_close"><ion-icon name="close" class="md hydrated" role="img" aria-label="close"></ion-icon></button>
+                        <form action="#_" id="edit-domain-form">
+                            <span>
+                                <label for="domain">Domain Name</label>
+                                <input type="text" name="domain" value="Domain name">
+                            </span>
+                            <span>
+                                <label for="login">Login</label>
+                                <input type="text" name="login" value="Login">
+                            </span>
+                            <span>
+                                <label for="timestamp_bought">Date Bought</label>
+                                <input type="date" name="timestamp_bought" value="2021-06-16" disabled class="date_disabled">
+                            </span>
+                            <span>
+                                <label for="expire_date">Expiration Date</label>
+                                <input type="date" name="expire_date" value="2022-06-16">
+                            </span>
+                            <span>
+                                <label for="platform_before">Platform Before</label>
+                                <input type="text" name="platform_before" value="Domain Platform Before">
+                            </span>
+                            <span>
+                                <label for="platform_name">Current Platform</label>
+                                <input type="text" name="platform_name" value="Domain Platform Current">
+                            </span>
+                            <span>
+                                <label for="platform_account_name">Platform Account</label>
+                                <input type="text" name="platform_account_name" value="Platform Account">
+                            </span>
+                            <span>
+                                <label for="status">Status</label>
+                                <select name="status" id="">
+                                    <option value="Not Renewed">Not Renewed</option>
+                                    <option value="Renewed">Renewed</option>
+                                </select>
+                            </span>
+                            <span>
+                                <label for="market">Market</label>
+                                <input type="text" name="market" list="filter-by-market_edit" placeholder="Market" class="edit_market_filter">
+                                <datalist name="" id="filter-by-market_edit">
+                                    <option value="Saudi_Arabia"></option>
+                                    <option value="Pakistan"></option>
+                                    <option value="Canada"></option>
+                                    <option value="Iran"></option>
+                                    <option value="Qatar"></option>
+                                </datalist>
+                            </span>
+                            <span>
+                                <label for="domain_type">Domain Type</label>
+                                <input type="text" name="domain_type" placeholder="Domain Type">
+                            </span>
+                            <span>
+                                <label for="price">Price</label>
+                                <input type="number" name="price" placeholder="Price">
+                            </span>
+                            <span>
+                                <label for="currency">Currency</label>
+                                <input type="text" name="currency" placeholder="Currency">
+                            </span>
+                            <span>
+                                <label for="connection">Connection</label>
+                                <input type="text" name="connection" placeholder="Connection">
+                            </span>
+                            <button type="submit" form="edit-domain-form" class="domain_edit_save" title="Save"><ion-icon name="save" role="img" class="md hydrated" aria-label="save"></ion-icon> Save</button>
+                        </form>
+                    </div>
+                  
+                </div>
+         
+            </div>
+
+            <footer><hr>Copyright © 2021 <b>IDB Mobile Technology</b></footer>
+        </div>
+        <div class="create-domain-popup">
+            <div class="popup-wrap domain_popup">
+                <ion-icon name="close" class="close-popup md hydrated" role="img" aria-label="close"></ion-icon>
+                <h2>Create Domain</h2>
+                <form action="#_" id="create-domain-form">
+                    <span>
+                        <label>Domain Name</label>
+                        <input type="text" name="domain" placeholder="Domain Name">
+                    </span>
+                    <span>
+                        <label>Login</label>
+                        <input type="text" name="login" placeholder="Login">
+                    </span>
+                    <span>
+                        <label>Date Bought</label>
+                        <input type="date" name="timestamp_bought" placeholder="Date of Birth">
+                    </span>
+                    <span>
+                        <label>Expiration Date</label>
+                        <input type="date" name="expire_date" placeholder="Expiration Date">
+                    </span>
+                    <span>
+                        <label>Platform Before</label>
+                        <input type="text" name="platform_before" placeholder="Platform Before">
+                    </span>
+                    <span>
+                        <label>Current Platform</label>
+                        <input type="text" name="platform_name" placeholder="Current Platform">
+                    </span>
+                    <span>
+                        <label>Platform Account</label>
+                        <input type="text" name="platform_account_name" placeholder="Platform Account">
+                    </span>
+                    <span>
+                        <label>Status</label>
+                        <select name="status" id="">
+                            <option value="" disabled selected>(Not) Renewed</option>
+                            <option value="Not Renewed">Not Renewed</option>
+                            <option value="Renewed">Renewed</option>
+                        </select>
+                    </span>
+                    <span>
+                        <label>Market</label>
+                        <input type="text" name="market" list="filter-by-market_add" placeholder="Market" class="create_market_filter">
+                        <datalist name="" id="filter-by-market_add">
+                            <option value="Saudi_Arabia"></option>
+                            <option value="Pakistan"></option>
+                            <option value="Canada"></option>
+                            <option value="Iran"></option>
+                            <option value="Qatar"></option>
+                        </datalist>
+                    </span>
+                    <span>
+                        <label>Domain Type</label>
+                        <input type="text" name="domain_type" placeholder="Domain Type">
+                    </span>
+                    <span>
+                        <label>Price</label>
+                        <input type="number" name="price" placeholder="Price">
+                    </span>
+                    <span>
+                        <label>Currency</label>
+                        <input type="text" name="currency" placeholder="Currency">
+                    </span>
+                    <span>
+                        <label>Connection</label>
+                        <input type="text" name="connection" placeholder="Connection">
+                    </span>
+                        <button type="submit" class="tab-edit-button tab-save-button save-domain" form="create-domain-form"><ion-icon name="save" role="img" class="md hydrated" aria-label="save"></ion-icon> Save Domain</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="delete-domain-wrap">
+            <div class="delete-domain-popup">
+                <ion-icon name="alert-outline" role="img" class="md hydrated" aria-label="alert outline"></ion-icon>
+                <h2 class="delete-h2">This will <span>permanently delete</span> the selected domain. Are you sure?</h2>
+                <button class="delete-domain-yes">Yes</button>
+                <button class="delete-domain-no">No</button>
+            </div>
+        </div>
+
+       
+    </main>
+  
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="js/networks-list-filter.js"></script>
+    <script src="js/responsive.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    
+    <script>
+        $(document).ready(function () {
+        //DOMAINS MARKET FILTER
+            $('.market_filter').change(function(){
+                $this = $(this);
+                $('.domain_list').hide();
+                $('.'+$this.val()).parent().parent().show();
+                $(".more_domains").hide();
+                if(($this).val()=="All"){
+                    $(".domain_list").show();
+                }
+            });
+
+        // DOMAINS MARKET ADD CLASS BY TEXT
+            $(".domain_market").each(function(){
+                var text = $(this).text();
+                text = text.replace(/\s+/g, '_');
+                $(this).addClass(text);
+            });
+
+        // DOMAINS CURRENT PLATFORM ADD CLASS BY TEXT
+            $(".domain_platform_current").each(function(){
+                var text = $(this).text();
+                text = text.replace(/\s+/g, '_');
+                $(this).addClass(text);
+            });
+
+        // DATALIST OVERFLOW
+            $(".market_filter, .create_market_filter, .edit_market_filter").focus(function(){
+                $(this).val('');
+            });
+
+            $(".market_filter, .create_market_filter, .edit_market_filter").change(function(){
+                $(this).blur();
+            });
+        });
+        </script>
+        <script>
+        // DATE RANGE FILTER
+        $(function() {
+
+            var start = moment().subtract(29, 'days');
+            var end = moment();
+
+            function cb(start, end) {
+                // $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+                $('#reportrange span').html("Filter by Expire Date");
+            }
+
+            $('#reportrange').daterangepicker({
+                startDate: start,
+                endDate: end,
+                ranges: {
+                'Today': [moment(), moment()],
+                'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                'This Month': [moment().startOf('month'), moment().endOf('month')],
+                'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                }
+            }, cb);
+            cb(start, end);
+            $('#reportrange').on('apply.daterangepicker', function(ev, picker) {
+                //do something, like clearing an input
+            $('#reportrange').val('');
+            console.log(start);
+            });
+            });
+
+           
+        </script>
+    <script>
+        //CREATE DOMAIN POPUP
+        $(".create_domain").on("click", function(){
+            $(".create-domain-popup").fadeIn();
+        });
+        $(".close-popup").on("click", function(){
+            $(this).parent().parent().fadeOut();
+            $("#create-domain-form input, #create-domain-form select").val(""); 
+        });
+    </script>
+    <script>
+        // EDIT DOMAIN
+        $(".domain_edit_close").on("click", function(){
+            $(this).hide();
+            $(".domain_list_form").hide();
+            $(".more_domains").show();
+            $(".domain_titles").show();
+            $(".excel_export").show();
+            $(".domains_list_wrapper>.domain_list").slice(0, 5).show();;
+        });
+
+        $(".domain_edit_save").on("click", function(){
+            $(".domain_list_form").hide();
+            $(".more_domains").show();
+            $(".domain_titles").show();
+            $(".excel_export").show();
+            $(".domains_list_wrapper>.domain_list").slice(0, 5).show();;
+        });
+
+        $(".domains_main_wrap").on("click", ".domain_edit", function(e){
+            var target = $(e.currentTarget);
+            var domain_1 = $(target).closest(".domain_list").find(".domain_name").text();
+            var domain_2 = $(target).closest(".domain_list").find(".domain_login").text();
+            var domain_3 = $(target).closest(".domain_list").find(".domain_bought_date").text();
+            var domain_4 = $(target).closest(".domain_list").find(".domain_exp-date").text();
+            var domain_5 = $(target).closest(".domain_list").find(".domain_platform_before").text();
+            var domain_6 = $(target).closest(".domain_list").find(".domain_platform_current").text();
+            var domain_7 = $(target).closest(".domain_list").find(".domain_account").text();
+            var domain_8 = $(target).closest(".domain_list").find(".domain_status").text();
+            var domain_9 = $(target).closest(".domain_list").find(".domain_market").text();
+            var domain_10 = $(target).closest(".domain_list").find(".domain_type").text();
+            var domain_11 = parseFloat($(target).closest(".domain_list").find(".domain_price").text());
+            var domain_12 = $(target).closest(".domain_list").find(".domain_currency").text();
+            var domain_13 = $(target).closest(".domain_list").find(".domain-connection").text();
+
+            $(".domain_list").hide();
+            $(".domain_titles").hide();
+            $(".excel_export").hide();
+            $(".domain_list_form").show();
+            $(".domain_edit_close").show();
+            $(".more_domains").hide();
+            $("#edit-domain-form input[name='domain']").val(domain_1);
+            $("#edit-domain-form input[name='login']").val(domain_2);
+            $("#edit-domain-form input[name='timestamp_bought']").val(domain_3);
+            $("#edit-domain-form input[name='expire_date']").val(domain_4);
+            $("#edit-domain-form input[name='platform_before']").val(domain_5);
+            $("#edit-domain-form input[name='platform_name']").val(domain_6);
+            $("#edit-domain-form input[name='platform_account_name']").val(domain_7);
+            $("#edit-domain-form select[name='status']").val(domain_8);
+            $("#edit-domain-form input[name='market']").val(domain_9);
+            $("#edit-domain-form input[name='domain_type']").val(domain_10);
+            $("#edit-domain-form input[name='price']").val(domain_11);
+            $("#edit-domain-form input[name='currency']").val(domain_12);
+            $("#edit-domain-form input[name='connection']").val(domain_13);
+        });
+    </script>
+    <script>
+        // DELETE DOMAIN
+        $(".delete_domain_btn").on("click", function(){
+            $(this).toggleClass("delete-pressed");
+            if($(".delete_domain_btn").hasClass("delete-pressed"))
+                {
+                    $(".delete_domain_btn a").contents().last().replaceWith(" Finish Deleting");
+                }
+
+                else
+                {
+                    $(".delete_domain_btn a").contents().last().replaceWith(" Delete Domain");
+                }
+            $(".domain_delete").fadeToggle();
+            $(".domain_edit").toggleClass("click_disabled");
+        });
+
+        $(".domains_list_wrap").on("click", ".domain_delete", function(e){
+            var target = $(e.currentTarget);
+
+            $(".delete-domain-wrap").fadeIn();
+            $(".delete-domain-yes").unbind().on("click", function(){
+                $(".delete-domain-wrap").fadeOut();
+                $(target).parent().fadeOut();
+            });
+        });
+
+        $(".delete-domain-no").on("click", function(){
+            $(".delete-domain-wrap").fadeOut();
+        });
+    </script>
+    <script>
+        // SAVE DOMAIN APPEND
+        $(".save-domain").on("click", function(){
+            var domain_form_name_1 = $("#create-domain-form input[name='domain']").val();
+            var domain_form_name_2 = $("#create-domain-form input[name='login']").val();
+            var domain_form_name_3 = $("#create-domain-form input[name='timestamp_bought']").val();
+            var domain_form_name_4 = $("#create-domain-form input[name='expire_date']").val();
+            var domain_form_name_5 = $("#create-domain-form input[name='platform_before']").val();
+            var domain_form_name_6 = $("#create-domain-form input[name='platform_name']").val();
+            var domain_form_name_7 = $("#create-domain-form input[name='platform_account_name']").val();
+            var domain_form_name_8 = $("#create-domain-form select[name='status']").val();
+            var domain_form_name_9 = $("#create-domain-form input[name='market']").val();
+            var domain_form_name_10 = $("#create-domain-form input[name='domain_type']").val();
+            var domain_form_name_11 = $("#create-domain-form input[name='price']").val();
+            var domain_form_name_12 = $("#create-domain-form input[name='currency']").val();
+            var domain_form_name_13 = $("#create-domain-form input[name='connection']").val();
+            var market_class = $("#create-domain-form input[name='market']").val();
+            var current_platform_class =  $("#create-domain-form input[name='platform_name']").val();
+            $(".create-domain-popup").fadeOut();
+            $("#create-domain-form input, #create-domain-form select").val(""); 
+            $(".domains_list_wrapper").prepend("<div class='domain_list'><div class='domain_info'><p class='domain_name'>"+domain_form_name_1+"</p><p class='domain_bought_date'>"+domain_form_name_3+"</p><p class='domain_exp-date'>"+domain_form_name_4+"</p><p class='domain_platform_current "+current_platform_class+"'>"+domain_form_name_6+"</p><p class='domain_status'>"+domain_form_name_8+"</p><p class='domain_market "+market_class+"'>"+domain_form_name_9+"</p></div><div class='domain_more'><div class='domain_more_flex'><p class='domain_login'>"+domain_form_name_2+"</p><p class='domain_platform_before'>"+domain_form_name_5+"</p><p class='domain_account'>"+domain_form_name_7+"</p><p class='domain_type'>"+domain_form_name_10+"</p><p class='domain_price'>"+domain_form_name_11+"</p><p class='domain_currency'>"+domain_form_name_12+"</p><p class='domain-connection'>"+domain_form_name_13+"</p></div></div><p class='domain_edit' title='Edit Domain'><ion-icon name='create-outline' role='img' class='md hydrated' aria-label='create outline'></ion-icon></p><p class='domain_delete' title='Delete Domain'><ion-icon name='trash' role='img' class='md hydrated' aria-label='trash'></ion-icon></p><button class='show_domain_more' title='Show More Domain Info'><ion-icon name='chevron-down' role='img' class='md hydrated' aria-label='chevron down'></ion-icon></button></div>");
+        });
+    </script>
+    <script>
+        // SHOW MORE BUTTON
+        $(document).ready(function(){
+            var list = $(".domains_list_wrapper>.domain_list");
+            var numToShow = 5;
+            var button = $(".more_domains");
+            var numInList = list.length;
+
+            list.hide();
+            if (numInList > numToShow) {
+                button.css("display", "block");
+            }
+            list.slice(0, numToShow).show();
+
+            button.click(function(){
+                var showing = list.filter(':visible').length;
+                list.slice(showing - 1, showing + numToShow).fadeIn();
+                var nowShowing = list.filter(':visible').length;
+                if (nowShowing >= numInList) {
+                    button.hide();
+                }
+                });
+        });
+    </script>
+    <script>
+        // SHOW MORE DOMAIN INFO BTN
+        $(".domains_list_wrap").on("click", ".show_domain_more", function(e){
+            var target = $(e.currentTarget);
+            $(target).siblings(".domain_more").slideToggle();
+            $(target).toggleClass("rotate");
+        });
+    </script>
+    <script>
+        // SIDEBAR DROPDOWN
+        $(".drop").on("click", function(e){
+            var target = $(e.currentTarget);
+            $(target).find(".side_drop").slideToggle();
+            $(".side_drop").not($(target).find(".side_drop")).slideUp();
+            $(".sidebar-container .drop_icon").not($(target).find(".drop_icon")).removeClass("rotate_icon");
+            $(target).find(".drop_icon").toggleClass("rotate_icon");
+
+            if($(target).closest(".main-sidebar").hasClass("collapsed-sidebar")){
+                $(".main-sidebar").removeClass("collapsed-sidebar");
+                $(".sidebar-title").show();
+                $(".sidebar-container nav ul .collapse-sidebar a ion-icon").toggleClass("rotate");
+            }
+        });
+    </script>
+    <script>
+        //COLLAPSE SIDEBAR
+        $(".collapse-sidebar").on("click", function(){
+            $(".main-sidebar").toggleClass("collapsed-sidebar");
+            $(".sidebar-title").delay(50).toggle(0);
+            $(".main-container").toggleClass("collapsed-main");
+            $(".collapse-sidebar ion-icon").toggleClass("rotate");
+        });
+    </script>
+    <script>
+        //PROFILE DROPDOWN
+        $(".li-profile-img").on("click", function(){
+            $(".profile-dropdown").slideToggle(200);
+            $(".notification-dropdown").slideUp(200);
+        });
+    </script>
+    <script>
+        //NOTIFICATION DROPDOWN
+        $(".header-right-icons ul li:first-child").on("click", function(){
+            $(".notification-dropdown").slideToggle(200);
+            $(".profile-dropdown").slideUp(200);
+        });
+    </script>
+    <script>
+        //CLICK OUTSIDE CLOSE DROPDOWN
+        $(".main-container").on("click", function(){
+            $(".notification-dropdown").slideUp(200);
+            $(".profile-dropdown").slideUp(200);
+        });
+    </script>
+    <script>
+        if($(".main-container").hasClass("collapsed-main")){
+            $(".profile-tabs::before").css("left", "15px");
+        }
+    </script>
+</body>
+</head>
+</html>
