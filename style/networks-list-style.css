@@ -1472,27 +1472,6 @@ p[title="Marketing Manager"] ion-icon {
   flex-wrap: wrap;
 }
 
-.networks-list li:nth-child(1) div:nth-child(2)::before{
-  content: "High Fraud?";
-  position: absolute;
-  top: -30px;
-  margin-left: -20px;
-}
-
-.networks-list li:nth-child(1) div:nth-child(3)::before{
-  content: "Status";
-  position: absolute;
-  top: -30px;
-  margin-left: -10px;
-}
-
-.networks-list li:nth-child(1) div:nth-child(4)::before{
-  content: "Network Manager";
-  position: absolute;
-  top: -30px;
-  /* margin-left: -10px; */
-}
-
 #mk-manager-filter {
   color: var(--text_color);
   padding: 10px 15px;
